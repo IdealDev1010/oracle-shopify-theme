@@ -7,3 +7,17 @@
     padding: 11px 0;
 }
 
+.header--has-menu {
+    gap: 105px;
+}
+
+.header__menu-item {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+}
+
+.list-menu--inline {
+    gap: 80px;
+}

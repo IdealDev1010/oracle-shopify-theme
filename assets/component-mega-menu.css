@@ -52,9 +52,6 @@
   word-wrap: break-word;
 }
 
-.mega-menu__link--level-2 {
-  font-weight: bold;
-}
 
 .header--top-center .mega-menu__list {
   display: flex;

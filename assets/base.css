@@ -2463,7 +2463,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
 
 .header__heading-link {
   display: inline-block;
-  padding: 0.75rem;
+  padding: 10px 0px;
   text-decoration: none;
   word-break: break-word;
 }
@@ -2809,7 +2809,7 @@ details[open] > .header__submenu {
 .header__menu-item {
   padding: 1.2rem;
   text-decoration: none;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 1);
 }
 
 .header__menu-item:hover {
