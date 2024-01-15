@@ -1,0 +1,11 @@
+.template--index main {
+    margin-top: -88px;
+}
+
+.template--index .header-wrapper--border-bottom {
+    background-color: transparent;
+}
+
+.template--index .section-header.shopify-section-group-header-group {
+    background-color: transparent;
+}
