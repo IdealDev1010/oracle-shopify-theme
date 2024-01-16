@@ -91,19 +91,21 @@ class HeaderMenu extends DetailsDisclosure {
 
 customElements.define('header-menu', HeaderMenu);
 
-function closeMegaMenu() {
+function closeMegaMenu(link) {
   document.querySelectorAll('header-menu').forEach(headerMenu => {
-    headerMenu.querySelector('details').removeAttribute('open');
-    headerMenu.querySelector('summary').setAttribute('aria-expanded', false);
+    if(headerMenu.querySelector('.list-menu__item') != link) {
+      headerMenu.querySelector('details').removeAttribute('open');
+      headerMenu.querySelector('summary').setAttribute('aria-expanded', false);
+    }
    });
 }
 
 document.querySelectorAll('.list-menu__item').forEach(item => {
   item.addEventListener('mouseover', function(){
-    closeMegaMenu();
+    closeMegaMenu(this);
   });
 })
 
 document.querySelector('.section-header').addEventListener('mouseleave', function(){
-  closeMegaMenu();
+  closeMegaMenu(this);
 });
