@@ -1,7 +1,14 @@
-@media (min-width:768px) {
+@media (min-widht: 1400px) {
     .header--has-menu {
         gap: 105px;
     }
+
+    .list-menu--inline {
+        gap: 80px;
+    }
+}
+
+@media (min-width:990px) {
 
     .header__icon svg {
         margin-right: 10px;
@@ -56,10 +63,6 @@
 
 }
 
-.list-menu--inline {
-    gap: 80px;
-}
-
 .header__icons {
     gap: 46px;
 }
@@ -74,8 +77,8 @@
 
 .mega-menu__list {
     gap: 115px !important;
-    padding-left: 209px;
-    margin: 0px;
+    margin: 0 auto;
+    padding: 0 50px;
 }
 
 .mega-menu__link.mega-menu__link--level-2.link {
@@ -96,13 +99,19 @@
     
 }
 
+@media (max-width: 1200px) {
+    .mega-menu__list {
+        gap: 0 !important;
+    }
+}
+
 
 
 .mega-menu__link.link:hover {
     text-decoration: none;
 }
 
-@media(max-width: 767px) {
+@media(max-width: 998px) {
     .header__icon .header__icon-text {
         display: none;
     }
