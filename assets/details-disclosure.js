@@ -109,3 +109,7 @@ document.querySelectorAll('.list-menu__item').forEach(item => {
 document.querySelector('.section-header').addEventListener('mouseleave', function(){
   closeMegaMenu(this);
 });
+
+document.querySelector('.header__heading-link').addEventListener('mouseover', function(){
+  closeMegaMenu(this);
+});
