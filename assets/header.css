@@ -103,6 +103,13 @@
     .mega-menu__list {
         gap: 0 !important;
     }
+
+    .header__icon .header__icon-text {
+        display: none;
+    }
+    .header__icons {
+        gap: 12px;
+    }
 }
 
 
@@ -111,11 +118,3 @@
     text-decoration: none;
 }
 
-@media(max-width: 998px) {
-    .header__icon .header__icon-text {
-        display: none;
-    }
-    .header__icons {
-        gap: 12px;
-    }
-}
