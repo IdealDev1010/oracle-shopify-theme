@@ -1,0 +1,77 @@
+{{ 'popular-product.css' | asset_url | stylesheet_tag }}
+
+<div class="popular-product">
+    <div class="popular-product-container">
+        <h1 class="popular-product__title">{{section.settings.title }}</h1>
+        <div class="popular-product__image-and-text">
+            <div class="popular-product__image">
+                <img src="{{block.settings.image }}">
+                <p>{{block.settings.subtext}}</p>
+            </div>
+            <div class="popular-product__text">
+                <div class="popular-product__text-description">{{block.settings.description}}</div>
+                <p class="popular-product__text-price">{{ block.settings.price }}</p>
+            </div>
+        </div>
+        <p class="popular-product__detail">{{ block.settings.detail }}</p>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "popular product",
+  "class": "popular-product",
+  "settings": [
+        {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "text"
+        },
+        {
+            "type": "text",
+            "id": "detail",
+            "label": "detail",
+            "default": "text"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image-with-text",
+            "name": "image with text",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "subtext",
+                    "label": "subtext",
+                    "default": "text"
+                },
+                {
+                    "type": "richtext",
+                    "id": "description",
+                    "label": "description",
+                    "default": "<p>text</p>"
+                },
+                {
+                    "type": "text",
+                    "id": "price",
+                    "label": "price",
+                    "default": "text"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+          "name": "popular product"
+        }
+      ]
+}
+
+{% endschema %}
+    

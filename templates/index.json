@@ -6,14 +6,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
+            "heading": "Jewelry is made with love",
             "heading_size": "h0"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "Shop Now",
             "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
@@ -27,6 +27,7 @@
         "button"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/pleased-caucasian-girl-looking-down-sad-black-haired-woman-posing-with-plant.png",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
@@ -41,6 +42,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
@@ -66,10 +68,62 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "popular_product_chVQ97": {
+      "type": "popular-product",
+      "blocks": {
+        "image_with_text_8aHDKi": {
+          "type": "image-with-text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_2.png",
+            "subtext": "New",
+            "description": "<p>Kazaur Weaving Ring<\/p>",
+            "price": "$132.00"
+          }
+        },
+        "image_with_text_3Jb8RX": {
+          "type": "image-with-text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_4.png",
+            "subtext": "New",
+            "description": "<p>Audrey Long Ring<\/p>",
+            "price": "$92.00"
+          }
+        },
+        "image_with_text_gxpYwd": {
+          "type": "image-with-text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_3.png",
+            "subtext": "New",
+            "description": "<p>Kazaur Male Ring<\/p>",
+            "price": "$136.00"
+          }
+        },
+        "image_with_text_deKima": {
+          "type": "image-with-text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/wedding-glass-precious-gold-luxury-golden_1.png",
+            "subtext": "New",
+            "description": "<p>Guardian Luna Circle Necklace<\/p>",
+            "price": "$180.00"
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_8aHDKi",
+        "image_with_text_3Jb8RX",
+        "image_with_text_gxpYwd",
+        "image_with_text_deKima"
+      ],
+      "settings": {
+        "title": "Popular Items",
+        "detail": "Show More"
+      }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "featured_collection",
+    "popular_product_chVQ97"
   ]
 }
