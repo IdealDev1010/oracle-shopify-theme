@@ -358,6 +358,13 @@
 
   .banner--desktop-transparent .button--secondary {
     --alpha-button-background: 0;
+    color: #000;
+    background: #fff;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 20px 80px;
+    line-height: 22px; /* 157.143% */
   }
 
   .banner--desktop-transparent .content-container:after {
@@ -430,16 +437,13 @@
   font-weight: 600;
   line-height: 70px; /* 116.667% */
   letter-spacing: 1.2px;
+  margin: 0px;
+  margin-bottom: 40px;
 }
 
 .banner__box .banner__heading + * {
-  margin-top: 1rem;
-  text-align: center;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 70px; /* 116.667% */
-  letter-spacing: 1.2px;
+  margin-top: 40px;
+ 
 }
 
 .banner__buttons {
@@ -473,7 +477,7 @@
 }
 
 .banner__box > * + .banner__buttons {
-  margin-top: 2rem;
+  margin: 0px;
 }
 
 @media screen and (max-width: 749px) {
