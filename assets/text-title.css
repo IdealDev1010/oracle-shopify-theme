@@ -4,4 +4,14 @@
     font-weight: 600;
     line-height: 70px; /* 116.667% */
     letter-spacing: 1.2px;
+    margin: 0px;
+    margin-bottom: 120px;
+
+}
+
+.text-title p {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
 }
