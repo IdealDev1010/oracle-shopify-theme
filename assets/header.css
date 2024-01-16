@@ -14,7 +14,7 @@
         margin-right: 10px;
     }
 
-    .template--index .section-header:not(:hover) .header__menu-item {
+    .template--index .section-header:not(:hover):not(.scrolled-past-header) .header__menu-item {
         color: #fff;
         transition: 0.3s;
     }
@@ -23,32 +23,32 @@
         margin-top: -88px;
     }
     
-    .template--index .section-header:not(:hover) .header-wrapper--border-bottom {
+    .template--index .section-header:not(:hover):not(.scrolled-past-header) .header-wrapper--border-bottom {
         background-color: transparent;
         transition: 0.3s;
     }
     
-    .template--index .section-header:not(:hover).shopify-section-group-header-group {
+    .template--index .section-header:not(:hover):not(.scrolled-past-header).shopify-section-group-header-group {
         background-color: transparent;
         transition: 0.3s;
     }
     
-    .template--index .section-header:not(:hover) .header__heading-logo {
+    .template--index .section-header:not(:hover):not(.scrolled-past-header) .header__heading-logo {
         filter: invert(1);
         transition: 0.3s;
     }
     
-    .template--index .section-header:not(:hover) .header__icon svg *{
+    .template--index .section-header:not(:hover):not(.scrolled-past-header) .header__icon svg *{
         stroke: #fff;
         transition: 0.3s;
     }
     
-    .template--index .section-header:not(:hover) .header__icon {
+    .template--index .section-header:not(:hover):not(.scrolled-past-header) .header__icon {
         color: #fff;
         transition: 0.3s;
     }
     
-    .template--index .section-header:not(:hover) .header-wrapper--border-bottom {
+    .template--index .section-header:not(:hover):not(.scrolled-past-header) .header-wrapper--border-bottom {
         border-color: #fff;
         transition: 0.3s;
     }
