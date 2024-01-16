@@ -9,6 +9,10 @@
 
 }
 
+
+@media (max-width:1350px) {
+    
+}
 .text-title p {
     text-align: left;
     display: flex;
