@@ -1,4 +1,4 @@
-@media (min-widht: 1400px) {
+@media (min-width: 1400px) {
     .header--has-menu {
         gap: 105px;
     }
@@ -76,7 +76,7 @@
 }
 
 .mega-menu__list {
-    gap: 115px !important;
+    gap: 115px;
     margin: 0 auto;
     padding: 0 50px;
 }
