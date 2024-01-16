@@ -1,5 +1,51 @@
-.header--has-menu {
-    gap: 105px;
+@media (min-width:768px) {
+    .header--has-menu {
+        gap: 105px;
+    }
+
+    .header__icon svg {
+        margin-right: 10px;
+    }
+
+    .template--index .section-header:not(:hover) .header__menu-item {
+        color: #fff;
+        transition: 0.3s;
+    }
+    
+    .template--index main {
+        margin-top: -88px;
+    }
+    
+    .template--index .section-header:not(:hover) .header-wrapper--border-bottom {
+        background-color: transparent;
+        transition: 0.3s;
+    }
+    
+    .template--index .section-header:not(:hover).shopify-section-group-header-group {
+        background-color: transparent;
+        transition: 0.3s;
+    }
+    
+    .template--index .section-header:not(:hover) .header__heading-logo {
+        filter: invert(1);
+        transition: 0.3s;
+    }
+    
+    .template--index .section-header:not(:hover) .header__icon svg *{
+        stroke: #fff;
+        transition: 0.3s;
+    }
+    
+    .template--index .section-header:not(:hover) .header__icon {
+        color: #fff;
+        transition: 0.3s;
+    }
+    
+    .template--index .section-header:not(:hover) .header-wrapper--border-bottom {
+        border-color: #fff;
+        transition: 0.3s;
+    }
+        
 }
 
 .header__menu-item {
@@ -26,10 +72,6 @@
     line-height: 22px; /* 157.143% */
 }
 
-.header__icon svg {
-    margin-right: 10px;
-}
-
 .mega-menu__list {
     gap: 115px !important;
     padding-left: 209px;
@@ -54,45 +96,17 @@
     
 }
 
-.template--index .section-header:not(:hover) .header__menu-item {
-    color: #fff;
-    transition: 0.3s;
-}
 
-.template--index main {
-    margin-top: -88px;
-}
-
-.template--index .section-header:not(:hover) .header-wrapper--border-bottom {
-    background-color: transparent;
-    transition: 0.3s;
-}
-
-.template--index .section-header:not(:hover).shopify-section-group-header-group {
-    background-color: transparent;
-    transition: 0.3s;
-}
-
-.template--index .section-header:not(:hover) .header__heading-logo {
-    filter: invert(1);
-    transition: 0.3s;
-}
-
-.template--index .section-header:not(:hover) .header__icon svg *{
-    stroke: #fff;
-    transition: 0.3s;
-}
-
-.template--index .section-header:not(:hover) .header__icon {
-    color: #fff;
-    transition: 0.3s;
-}
-
-.template--index .section-header:not(:hover) .header-wrapper--border-bottom {
-    border-color: #fff;
-    transition: 0.3s;
-}
 
 .mega-menu__link.link:hover {
     text-decoration: none;
+}
+
+@media(max-width: 767px) {
+    .header__icon .header__icon-text {
+        display: none;
+    }
+    .header__icons {
+        gap: 12px;
+    }
 }

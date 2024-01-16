@@ -91,11 +91,19 @@ class HeaderMenu extends DetailsDisclosure {
 
 customElements.define('header-menu', HeaderMenu);
 
+function closeMegaMenu() {
+  document.querySelectorAll('header-menu').forEach(headerMenu => {
+    headerMenu.querySelector('details').removeAttribute('open');
+    headerMenu.querySelector('summary').setAttribute('aria-expanded', false);
+   });
+}
+
 document.querySelectorAll('.list-menu__item').forEach(item => {
   item.addEventListener('mouseover', function(){
-    document.querySelectorAll('header-menu').forEach(headerMenu => {
-     headerMenu.querySelector('details').removeAttribute('open');
-     headerMenu.querySelector('summary').setAttribute('aria-expanded', false);
-    });
+    closeMegaMenu();
   });
 })
+
+document.querySelector('.section-header').addEventListener('mouseleave', function(){
+  closeMegaMenu();
+});
