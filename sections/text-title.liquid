@@ -1,0 +1,29 @@
+{{'text-title.css' | asset_url | stylesheet_tag}}
+
+<div class="text-title-wrapper">
+    <div class="text-title page-width">
+        <p class="text-title">{{ section.settings.title }}</p>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "text title",
+        "class": "text-title",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "text"
+            }
+        ],
+
+        "presets": [
+            {
+              "name": "text title"
+            }
+        ]
+    }
+{% endschema %}
+

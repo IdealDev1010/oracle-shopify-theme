@@ -119,11 +119,18 @@
         "title": "Popular Items",
         "detail": "Show More"
       }
+    },
+    "text_title_BzJ3za": {
+      "type": "text-title",
+      "settings": {
+        "title": "Minimalism and simplicity combined with interesting shapes. Choose a piece of jewelry that you like."
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "popular_product_chVQ97"
+    "popular_product_chVQ97",
+    "text_title_BzJ3za"
   ]
 }
