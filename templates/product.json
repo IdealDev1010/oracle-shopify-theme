@@ -16,6 +16,14 @@
           "settings": {
           }
         },
+        "inventory_p7ayhe": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 0,
+            "show_inventory_quantity": false
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -61,6 +69,7 @@
       "block_order": [
         "vendor",
         "title",
+        "inventory_p7ayhe",
         "price",
         "variant_picker",
         "quantity_selector",
