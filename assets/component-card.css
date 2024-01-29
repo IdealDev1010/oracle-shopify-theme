@@ -102,6 +102,7 @@
 
 .card-information {
   text-align: var(--text-alignment);
+  text-align: center;
 }
 
 .card__media,
@@ -160,11 +161,10 @@
   color: rgba(var(--color-foreground), 0.75);
 }
 
-@media screen and (min-width: 750px) {
-  .card__information {
-    padding-bottom: 1.7rem;
-    padding-top: 1.7rem;
-  }
+.card__information {
+  padding-bottom: 4rem;
+  padding-top: 1rem;
+  text-align: center;
 }
 
 .card__badge {
@@ -243,6 +243,15 @@
   top: calc(var(--border-width) * -1);
 }
 
+.card__heading a {
+  color: #3A3836;
+text-align: center;
+font-size: 16px;
+font-style: normal;
+font-weight: 300;
+line-height: 24px; /* 150% */
+letter-spacing: 0.32px;
+}
 .card__heading a::after {
   bottom: 0;
   content: '';
@@ -299,7 +308,7 @@
   }
 
   .underline-links-hover:hover a {
-    text-decoration: underline;
+    text-decoration: none;
     text-underline-offset: 0.3rem;
   }
 }
@@ -365,6 +374,7 @@
 
 .card-information {
   width: 100%;
+  text-align: center;
 }
 
 .card-information > * {
@@ -385,7 +395,7 @@
 }
 
 .card-information > *:not(.visually-hidden:first-child) + *:not(.rating):not(.card__information-volume-pricing-note) {
-  margin-top: 0.7rem;
+  margin-top: 1rem;
 }
 
 .card-information .caption {

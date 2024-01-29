@@ -11,8 +11,8 @@
   }
 
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_mob_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_mob_bottom | times: 0.75 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
@@ -67,7 +67,7 @@
           >
             {%- for block in section.blocks -%}
               <div
-                class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="footer-block {% if block.type == 'link_list' %} footer-block--menu{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
@@ -76,8 +76,14 @@
               >
                 {%- if block.settings.heading != blank -%}
                   <h2 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h2>
+                  {% if block.settings.heading == 'Follow Us' %}
+                    {%- if section.settings.show_social and has_social_icons -%}
+                      {%- render 'social-icons', class: 'footer__list-social small-hide' -%}
+                      {%- render 'social-icon', class: 'footer__list-social-mobile large-up-hide medium-hide' -%}                    
+                    {%- endif -%}
+                  {%- endif -%}
                 {%- endif -%}
-
+                
                 {%- case block.type -%}
                   {%- when '@app' -%}
                     {% render block %}
@@ -155,6 +161,25 @@
                 {%- endcase -%}
               </div>
             {%- endfor -%}
+            <div class="footer__copyright caption">
+              <small class="copyright__content"
+                >&copy; {{ 'now' | date: '%Y' }}  Bullet beauty. All rights reserved. {%- comment -%}{{ shop.name | link_to: routes.root_url -}}{%- endcomment -%} 
+              </small>
+              <small class="copyright__content">{{ powered_by_link }}</small>
+              {%- if section.settings.show_policy -%}
+                <ul class="policies list-unstyled">
+                  {%- for policy in shop.policies -%}
+                    {%- if policy != blank -%}
+                      <li>
+                        <small class="copyright__content"
+                          ><a href="{{ policy.url }}">{{ policy.title }}</a></small
+                        >
+                      </li>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </div>
           </div>
         {%- endif -%}
 
@@ -238,10 +263,10 @@
             </div>
           {%- endif -%}
 
-          {%- if section.settings.show_social and has_social_icons -%}
-            {%- render 'social-icons', class: 'footer__list-social' -%}
-          {%- endif -%}
+          
         </div>
+
+     
       </div>
     {%- endunless -%}
   {%- endif -%}
@@ -252,7 +277,7 @@
       data-cascade
     {% endif %}
   >
-    <div class="footer__content-bottom-wrapper page-width">
+    <div class="footer__content-bottom-wrapper">
       <div class="footer__column footer__localization isolate">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <noscript>
@@ -333,7 +358,7 @@
           </localization-form>
         {%- endif -%}
       </div>
-      <div class="footer__column footer__column--info">
+      <!--div class="footer__column footer__column--info">
         {%- if section.settings.payment_enable -%}
           <div class="footer__payment">
             <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
@@ -346,12 +371,10 @@
             </ul>
           </div>
         {%- endif -%}
-      </div>
-    </div>
-    <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
+      </div-->
       <div class="footer__copyright caption">
         <small class="copyright__content"
-          >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
+          >&copy; {{ 'now' | date: '%Y' }}  Bullet beauty. All rights reserved. {%- comment -%}{{ shop.name | link_to: routes.root_url -}}{%- endcomment -%} 
         </small>
         <small class="copyright__content">{{ powered_by_link }}</small>
         {%- if section.settings.show_policy -%}
@@ -368,7 +391,18 @@
           </ul>
         {%- endif -%}
       </div>
+      <div class="footer__content-bottom-icon">
+        {% render 'icon-footer1' %}
+        {% render 'icon-footer2' %}
+        {% render 'icon-footer3' %}
+        {% render 'icon-footer4' %}
+        {% render 'icon-footer5' %}
+        {% render 'icon-footer6' %}
+      </div>
     </div>
+    <!--div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}"-->
+      
+      
   </div>
 </footer>
 
@@ -599,6 +633,26 @@
     {
       "type": "range",
       "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_mob_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_mob_bottom",
       "min": 0,
       "max": 100,
       "step": 4,

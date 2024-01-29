@@ -1,0 +1,23 @@
+<div class="collection-grid">
+    <div class="collection-item">
+        <div class="collection-item-image">
+            <a href="{{collection.url}}">{{ collection.featured_image | img_url: '750x' | img_tag }}</a>
+        </div>
+        <div class="collection-item-info">
+            <a class="collection-item-link" href="{{ collection.url }}">{{ collection.title }}<span class="collection-item__icon-arrow">{% render 'icon-arrow-right-light' %}</span></a>
+        </div>
+    </div>
+    <div class="collection__product-grid">
+        {% for product in collection.products limit: 2 %}
+            <div class="collection__product-item">
+                <div class="collection__product-item--image">
+                    <a href="{{ product.url }}">{{ product.featured_image | img_url: '350x' | img_tag }}</a>
+                </div>
+                <div class="collection__product-item--info">
+                    <a class="collection__product-item--link" href="{{ product.url }}">{{ product.title }}</a>
+                    <p class="collection__product-item--price">{{ product.price | money }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

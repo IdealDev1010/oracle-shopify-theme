@@ -5,6 +5,15 @@
   }
 }
 
+
+.collection__title .inline-richtext {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 64px;
+    letter-spacing: .96px;
+    text-align: center;
+}
 @media screen and (max-width: 989px) {
   .collection .slider.slider--tablet {
     margin-bottom: 1.5rem;
@@ -96,4 +105,106 @@
 
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
+}
+
+.collection__title .inline-richtext {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 64px;
+    letter-spacing: .96px;
+    text-align: center;
+}
+
+.full-unstyled-link {
+    color: #3a3836;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: .32px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.card__information .price .price__container {
+  color: #3A3836;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.32px;
+}
+
+.card__information .price {
+  text-align: center;
+}
+
+@media (max-width:768px) {
+  .collection__title .inline-richtext {
+    font-size: 24px;
+  }
+  .collection__title {
+    margin: 0px !important;
+  }
+
+  .collection {
+    padding-top: 30px;
+  }
+
+  .card__information .full-unstyled-link {
+    font-size: 12px;
+  }
+
+  .card__information .price .price__container {
+    font-size: 12px;
+  }
+
+  .collection__view-all .underlined-link p {
+    font-size: 14px;
+    margin: 0px;    
+  }   
+}
+
+.facets-vertical-sort .field-search {
+  max-width: 324px;
+  width: 100%;  
+}
+
+.facets-vertical-sort {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.facets-vertical-sort .field-search .field__search {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  background: transparent;
+  font-size: 17px;
+  border-left: none;
+  cursor: pointer;
+  
+  padding-top: 13px;
+}
+
+
+.search-input {
+  width: 100%;
+  border: none;
+  border: 1px solid #D8D8D8;
+}
+ 
+.field-search {
+  position: relative;
+}
+
+.search-input::placeholder {
+  opacity: 1;
+  color: #6E7172;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
 }

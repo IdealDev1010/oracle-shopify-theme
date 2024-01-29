@@ -314,6 +314,9 @@ fieldset.product-form__input .form__label {
   padding: 20px 0px;
 }
 
+.product-form__submit span {
+  text-transform: capitalize;
+}
 .product-form__submit .icon-cart {
   margin-right: 10px;
 }
@@ -1715,6 +1718,16 @@ a.product__text {
   line-height: 24px; /* 150% */
   padding: 14px 15px;
   max-width: 203px;
+  -moz-appearance: none; 
+  -webkit-appearance: none; 
+  background-image: url(arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  cursor: pointer;
+}
+
+.product-form__select select::-ms-expand { 
+  display: none; 
 }
 
 .product-form__select {
@@ -1755,7 +1768,6 @@ a.product__text {
   margin-top: 0px;
   padding-top: 0px;
 }
-
 
 .product-pickup__info-icon {
   position: absolute;

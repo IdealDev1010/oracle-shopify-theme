@@ -14,9 +14,35 @@
 
 <share-button id="Share-{{ section.id }}" class="share-button quick-add-hidden" {{ block.shopify_attributes }}>
   <button class="share-button__button hidden">
-    {% render 'icon-share' %}
-    {{ block.settings.share_label | escape }}
+    {% comment %} {% render 'icon-share' %} {% endcomment %}
+    {{ block.settings.share_label | escape }}:
   </button>
+  <ul class="list-unstyled list-social{% if class %} {{ class}}{% endif %}" role="list">
+    {%- if settings.social_facebook_link != blank -%}
+      <li class="list-social__item">
+        <a href="{{ settings.social_facebook_link }}" class="link list-social__link">
+          {%- render 'icon-facebook' -%}
+          <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if settings.social_twitter_link != blank -%}
+      <li class="list-social__item">
+        <a href="{{ settings.social_twitter_link }}" class="link list-social__link">
+          {%- render 'icon-twitter' -%}
+          <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if settings.social_pinterest_link != blank -%}
+      <li class="list-social__item">
+        <a href="{{ settings.social_pinterest_link }}" class="link list-social__link">
+          {%- render 'icon-pinterest' -%}
+          <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
+        </a>
+      </li>
+    {%- endif -%}
+  </ul>
   <details id="Details-{{ block.id }}-{{ section.id }}">
     <summary class="share-button__button">
       {% render 'icon-share' %}

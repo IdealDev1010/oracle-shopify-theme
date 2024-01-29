@@ -58,3 +58,9 @@
     display: block;
   }
 }
+
+.card_media .card__media-subtext {
+  font-size: 40px;
+}
+
+

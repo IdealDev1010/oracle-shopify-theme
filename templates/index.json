@@ -7,18 +7,18 @@
           "type": "heading",
           "settings": {
             "heading": "Jewelry is made with love",
-            "heading_size": "h0"
+            "heading_size": "h1"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Now",
+            "button_label_1": "",
             "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_1": false,
+            "button_label_2": "Shop Now",
+            "button_link_2": "shopify:\/\/collections\/all",
+            "button_style_secondary_2": true
           }
         }
       },
@@ -28,7 +28,10 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/pleased-caucasian-girl-looking-down-sad-black-haired-woman-posing-with-plant.png",
-        "image_overlay_opacity": 40,
+        "mobile_image": "shopify:\/\/shop_images\/Property_1_Default.png",
+        "image_overlay_opacity": 0,
+        "image_desktop_height": 72,
+        "image_mobile_height": 63,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
@@ -42,22 +45,21 @@
     },
     "featured_collection": {
       "type": "featured-collection",
-      "disabled": true,
       "settings": {
-        "title": "Featured products",
+        "title": "Popular Items",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
+        "collection": "best-seller",
+        "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
         "show_view_all": true,
-        "view_all_style": "solid",
+        "view_all_style": "link",
         "enable_desktop_slider": false,
         "color_scheme": "background-1",
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
@@ -65,59 +67,10 @@
         "enable_quick_add": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
-      }
-    },
-    "popular_product_chVQ97": {
-      "type": "popular-product",
-      "blocks": {
-        "image_with_text_8aHDKi": {
-          "type": "image-with-text",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image_2.png",
-            "subtext": "New",
-            "description": "<p>Kazaur Weaving Ring<\/p>",
-            "price": "$132.00"
-          }
-        },
-        "image_with_text_3Jb8RX": {
-          "type": "image-with-text",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image_4.png",
-            "subtext": "New",
-            "description": "<p>Audrey Long Ring<\/p>",
-            "price": "$92.00"
-          }
-        },
-        "image_with_text_gxpYwd": {
-          "type": "image-with-text",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image_3.png",
-            "subtext": "New",
-            "description": "<p>Kazaur Male Ring<\/p>",
-            "price": "$136.00"
-          }
-        },
-        "image_with_text_deKima": {
-          "type": "image-with-text",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/wedding-glass-precious-gold-luxury-golden_1.png",
-            "subtext": "New",
-            "description": "<p>Guardian Luna Circle Necklace<\/p>",
-            "price": "$180.00"
-          }
-        }
-      },
-      "block_order": [
-        "image_with_text_8aHDKi",
-        "image_with_text_3Jb8RX",
-        "image_with_text_gxpYwd",
-        "image_with_text_deKima"
-      ],
-      "settings": {
-        "title": "Popular Items",
-        "detail": "Show More"
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "padding_top_mob": 36,
+        "padding_bottom_mob": 36
       }
     },
     "text_title_VqXx9a": {
@@ -125,12 +78,200 @@
       "settings": {
         "title": "<p>Minimalism and simplicity combined with<br\/>interesting shapes. Choose a piece of jewelry<br\/>that you like.<\/p>"
       }
+    },
+    "photo_category_zrTJPR": {
+      "type": "photo-category",
+      "blocks": {
+        "photo_category_part_M84z4c": {
+          "type": "photo-category-part",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/model-demonstrating-bracelet-isolated-gray.png"
+          }
+        },
+        "photo_category_part_mjeR4R": {
+          "type": "photo-category-part",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/young-model-demonstrating-expensive-ring.png"
+          }
+        },
+        "photo_category_part_BYPLzb": {
+          "type": "photo-category-part",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/wedding-glass-precious-gold-luxury-golden_1_1.png"
+          }
+        },
+        "photo_category_part_hiQkw3": {
+          "type": "photo-category-part",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pretty-young-woman-posing-white-chair-studio_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "photo_category_part_M84z4c",
+        "photo_category_part_mjeR4R",
+        "photo_category_part_BYPLzb",
+        "photo_category_part_hiQkw3"
+      ],
+      "settings": {
+        "photo": "shopify:\/\/shop_images\/charming-white-woman-holding-plant-pretty-blackhaired-girl-enjoying-indoor-photoshoot_4e417add-94f8-4e56-aab4-039e329843f3.png"
+      }
+    },
+    "image_banner_xPRGCa": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_Rm8XMj": {
+          "type": "heading",
+          "settings": {
+            "heading": "New Collection 2022",
+            "heading_size": "h1"
+          }
+        },
+        "buttons_HWpYcd": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "Shop Now",
+            "button_link_2": "#",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_Rm8XMj",
+        "buttons_HWpYcd"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/pexels-cottonbro-5359325_1.png",
+        "mobile_image": "shopify:\/\/shop_images\/pexels-cottonbro-5359325_1_1.png",
+        "image_overlay_opacity": 30,
+        "image_desktop_height": 56,
+        "image_mobile_height": 55,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "accent-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "feature_product_UR9xKJ": {
+      "type": "feature-product",
+      "settings": {
+        "product": "gift-card"
+      }
+    },
+    "image_with_text_mJz9AT": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_A49Fhw": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hurry! Sale 50%",
+            "heading_size": "h1"
+          }
+        },
+        "text_mzGiVR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We don’t have any ideas what to give ourselves, or are you doubting your choice?A gift certificate is a modern way to bring in friends and relatives, to pick out those who are dear to your heart.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_b4xhiT": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "#",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_A49Fhw",
+        "text_mzGiVR",
+        "button_b4xhiT"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/model-demonstrating-silver-earrings.png",
+        "Gift_card": false,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_mob_top": 0,
+        "padding_mob_bottom": 28
+      }
+    },
+    "image_with_text_6YaxzD": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_twKwHx": {
+          "type": "heading",
+          "settings": {
+            "heading": "Newsletter",
+            "heading_size": "h1"
+          }
+        },
+        "text_BCN7fr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sign up for exclusive deals and early access to new products.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "email_D6BVqr": {
+          "type": "email",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_twKwHx",
+        "text_BCN7fr",
+        "email_D6BVqr"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_5.png",
+        "Gift_card": true,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 100,
+        "padding_mob_top": 0,
+        "padding_mob_bottom": 28
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "popular_product_chVQ97",
-    "text_title_VqXx9a"
+    "text_title_VqXx9a",
+    "photo_category_zrTJPR",
+    "image_banner_xPRGCa",
+    "feature_product_UR9xKJ",
+    "image_with_text_mJz9AT",
+    "image_with_text_6YaxzD"
   ]
 }

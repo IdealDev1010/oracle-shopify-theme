@@ -1,11 +1,12 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
 
-<div class="page-width">
+<div class="page-width list-collections">
+  {% render 'breadcrumbs' %}
   <h1 class="title title--primary inline-richtext{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
     {{ section.settings.title }}
   </h1>
-  {%- liquid
+  {% comment %} {%- liquid
     case section.settings.sort
       when 'products_high', 'products_low'
         assign collections = collections | sort: 'all_products_count'
@@ -45,8 +46,21 @@
       {%- endfor -%}
     </ul>
     {% render 'pagination', paginate: paginate %}
-  {%- endpaginate -%}
+  {%- endpaginate -%} {% endcomment %}
+  <div class="main-collection-list">
+    {% for collection in collections %}
+      {% assign m = forloop.index0 | modulo: 3 %}
+      {% if m == 0 %}
+        {% render 'collection-grid' collection: collection %}
+      {% else %}
+          {% render 'collection-grid2' collection: collection %}
+      {% endif %}
+    {% endfor %}
+
+  </div>
 </div>
+<script src="{{ 'collection-grid.js' | asset_url }}" defer="defer"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
 {% schema %}
 {
   "name": "t:sections.main-list-collections.name",

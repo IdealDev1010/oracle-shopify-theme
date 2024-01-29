@@ -1362,6 +1362,13 @@
         "id": "social_vimeo_link",
         "label": "t:settings_schema.social-media.settings.social_vimeo_link.label",
         "placeholder": "t:settings_schema.social-media.settings.social_vimeo_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_linkedin_link",
+        "label": "Linkedin",
+        "placeholder": "t:settings_schema.social-media.settings.social_linkedin_link.info",
+        "info": "https:\/\/www.linkedin.tv\/shopify"
       }
     ]
   },

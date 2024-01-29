@@ -12,6 +12,7 @@
       aria-label="{{ 'sections.header.menu' | t }}"
     >
       <span>
+        {%render 'icon-open' %}
         {% render 'icon-hamburger' %}
         {% render 'icon-close' %}
       </span>
@@ -139,6 +140,7 @@
                 -%}
               </a>
             {%- endif -%}
+            {%- comment -%}
             {%- if localization.available_countries or localization.available_languages -%}
               <div class="menu-drawer__localization header-localization">
                 {%- if localization.available_countries and localization.available_countries.size > 1 -%}
@@ -229,6 +231,7 @@
                 {%- endif -%}
               </div>
             {%- endif -%}
+          
             <ul class="list list-social list-unstyled" role="list">
               {%- if settings.social_twitter_link != blank -%}
                 <li class="list-social__item">
@@ -303,6 +306,7 @@
                 </li>
               {%- endif -%}
             </ul>
+              {%- endcomment -%}
           </div>
         </div>
       </div>

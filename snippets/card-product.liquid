@@ -22,6 +22,9 @@
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
+{{ 'card-product.css' | asset_url | stylesheet_tag }}
+
+
 
 {%- if card_product and card_product != empty -%}
   {%- liquid
@@ -79,6 +82,7 @@
               {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
 
               {%- if card_product.media[1] != null and show_secondary_image -%}
+                
                 <img
                   srcset="
                     {%- if card_product.media[1].width >= 165 -%}{{ card_product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
@@ -96,8 +100,10 @@
                   loading="lazy"
                   width="{{ card_product.media[1].width }}"
                   height="{{ card_product.media[1].height }}"
-                >
+                > 
               {%- endif -%}
+
+              <p class="card__media-subtext" >New</p>
             </div>
           </div>
         {%- endif -%}

@@ -1,0 +1,136 @@
+
+
+
+button {
+	background-color: #ddd;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	margin: 10px;
+	font-size: 18px;
+	font-weight: 600;
+	transition: all 0.5s;
+}
+button.slick-disabled {
+	opacity: 0.6;
+}
+
+
+.product-slide__content {
+    /* max-width: calc(100% - (100% - 160rem) / 2);
+    margin-left: calc(( 100% - 162rem) / 2 ); */
+    margin-bottom: 100px;
+    margin-right: 0px;
+}
+
+.swiper-btn-next {
+    max-width: 40px;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    right: 9%;
+}
+
+.swiper-btn-next svg {
+    width: 100%;
+}
+
+.swiper-btn-prev {
+    display: none;
+    max-width: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+    left: 9%;
+}
+
+
+.swiper-btn-prev svg {
+    width: 100%;
+    transform: rotate(180deg);
+}
+
+@media (min-width: 769px) {
+    /* .product-slide {
+     margin-left: 35px;
+    } */
+    
+}
+
+@media (max-width: 1610px) {
+    .swiper-btn-next {
+        max-width: 40px;
+        position: absolute;
+        z-index: 9999;
+        top: 50%; 
+        transform: translateY(50%);
+        right: 9%;
+    }
+
+    .product__image img{
+        width: 100%;
+    } 
+    .product-slide__content {
+        /* max-width: calc(100% - (100% - 160rem) / 2);
+        margin-left: calc(( 100% - 162rem) / 2 ); */
+        margin-bottom: 100px;
+        margin-right: 0px;
+
+    }
+    .product-slide {
+        padding-left: 50px;
+    }
+   
+}
+
+@media (min-width: 1620px) { 
+    .product-slide__content {
+        max-width: calc(100% - (100% - 160rem) / 2);
+        margin-left: calc((100% - 162rem) / 2 );
+        margin-bottom: 100px;
+    }
+    
+    .product__image { 
+        max-width: 483px;
+        height: 603px;
+    
+        width: 100%;
+        
+    } 
+
+    .product__image img{
+        width: 100%;
+        height: auto;
+    } 
+    .product-slide {
+        padding-left: 122px;
+    }
+     
+}
+
+@media (max-width:768px) {
+     
+    .product__image img{
+        width: 100%;
+    } 
+
+    .product-slide {
+        padding-left: 0px;
+    }
+   
+
+    .swiper-btn-next svg {
+        display: none;
+    }
+    .swiper-btn-prev svg {
+        display: none;
+    }
+
+    .product-slide {
+        margin-left: 0px;
+        margin-bottom: 30px;
+    }
+   
+}
+

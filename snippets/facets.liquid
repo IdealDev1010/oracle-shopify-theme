@@ -26,6 +26,8 @@
   endif
 -%}
 
+
+
 <div class="facets-container{% if filter_type == 'drawer' %} facets-container-drawer{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
   {%- if filter_type == 'vertical' or filter_type == 'horizontal' -%}
     <facet-filters-form class="facets small-hide">
@@ -41,6 +43,7 @@
         {% if enable_filtering %}
           {% comment %} Heading is the first tabbable element on filter type horizontal {% endcomment %}
           <div
+            class="facets__form-vertical-wapper"
             id="FacetsWrapperDesktop"
             {% if filter_type == 'horizontal' %}
               class="facets__wrapper"
@@ -64,11 +67,7 @@
                       {{ 'products.facets.filter_by_label' | t }}
                     </h2>
                   {%- endunless -%}
-                  <facet-remove class="active-facets__button-wrapper">
-                    <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
-                      <span>{{ 'products.facets.clear_all' | t }}</span>
-                    </a>
-                  </facet-remove>
+               
                 </div>
                 {%- for filter in results.filters -%}
                   {%- for value in filter.active_values -%}
@@ -138,14 +137,14 @@
                   >
                     <summary
                       class="facets__summary caption-large focus-offset"
-                      aria-label="{{ filter.label }} ({{ 'products.facets.filters_selected.one' | t: count: filter.active_values.size }})"
+                      aria-label="{{ filter.label }}" {%- comment -%}({{ 'products.facets.filters_selected.one' | t: count: filter.active_values.size }}){%- endcomment -%}
                     >
                       <div>
                         <span class="facets__summary-label">
                           {{- filter.label | escape }}
                           {%- if filter_type == 'vertical' -%}
                             <span class="facets__selected no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}">
-                              ({{ filter.active_values.size }})</span
+                              {%- comment -%}({{ filter.active_values.size }}){%- endcomment -%}</span
                             >
                           {%- endif -%}
                         </span>
@@ -258,7 +257,7 @@
                                 {% endif %}
 
                                 <span class="facet-checkbox__text" aria-hidden="true">
-                                  {{- value.label | escape }} ({{ value.count }})</span
+                                  {{- value.label | escape }} </span
                                 >
                                 <span class="visually-hidden">
                                   {{- value.label | escape }} (
@@ -418,6 +417,10 @@
                               max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
                             {% endif %}
                           >
+                          
+
+                                                       
+
                           <label class="field__label" for="Filter-{{ filter.label | escape }}-GTE">
                             {{- 'products.facets.from' | t -}}
                           </label>
@@ -452,16 +455,35 @@
                           </label>
                         </div>
                       </price-range>
+                      <div class="filter-price-range">
+                        <div class="range-wrapper">
+                          <div class="range-container">
+                            <div class="slider-track"></div>
+                            <input type="range" min="0" max="100" value="0" id="slider-1" oninput="slideOne()" class="price-slider">
+                            <input type="range" min="0" max="100" value="100" id="slider-2" oninput="slideTwo()" class="price-slider">
+                          </div>
+                        </div>
+                      </div>
+                    <div class="filter-price-text">
+                      <p class="filter-min-price"></p>
                     </div>
+
+                    
                   </details>
               {% endcase %}
             {%- endfor -%}
-            <noscript>
-              <button type="submit" class="facets__button-no-js button button--secondary">
-                {{ 'products.facets.filter_button' | t }}
-              </button>
-            </noscript>
+            
           </div>
+          <div class="facets-filter">
+            <button type="submit" class="facets__button-no-js button button--secondary">
+              {{ 'products.facets.filter_button' | t }}
+            </button>
+            <facet-remove class="active-facets__button-wrapper">
+              <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
+                <span>{{ 'products.facets.clear_all' | t }}</span>
+              </a>
+            </facet-remove>
+        </div>
           {% comment %} Pills after filtes on filter type horizontal {% endcomment %}
           {%- if filter_type == 'horizontal' -%}
             <div class="active-facets active-facets-desktop">
@@ -530,7 +552,9 @@
                     id="SortBy"
                     aria-describedby="a11y-refresh-page-message"
                   >
+                    
                     {%- for option in results.sort_options -%}
+                      
                       <option
                         value="{{ option.value | escape }}"
                         {% if option.value == sort_by %}
@@ -590,6 +614,7 @@
                   aria-describedby="a11y-refresh-page-message"
                 >
                   {%- for option in results.sort_options -%}
+                    
                     <option
                       value="{{ option.value | escape }}"
                       {% if option.value == sort_by %}
@@ -818,15 +843,16 @@
                           <div class="no-js-hidden mobile-facets__footer gradient">
                             <facet-remove class="mobile-facets__clear-wrapper">
                               <a href="{{ filter.url_to_remove }}" class="mobile-facets__clear underlined-link">
-                                {{- 'products.facets.clear' | t -}}
+                                {%- comment -%}{{- 'products.facets.clear' | t -}}{%- endcomment -%}Clear All
                               </a>
                             </facet-remove>
                             <button
                               type="button"
                               class="no-js-hidden button button--primary"
                               onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
-                            >
-                              {{ 'products.facets.apply' | t }}
+                            > Filter
+                              {%- comment -%}{{ 'products.facets.apply' | t }}{%- endcomment -%}
+
                             </button>
                             <noscript
                               ><button class="button button--primary">
@@ -932,18 +958,31 @@
                               </label>
                             </div>
                           </price-range>
+
+                          <div class="filter-price-range">
+                            <div class="range-wrapper">
+                              <div class="range-container">
+                                <div class="slider-mobile-track"></div>
+                                <input type="range" min="0" max="100" value="0" id="slider-3" oninput="slideThree()" class="price-slider">
+                                <input type="range" min="0" max="100" value="100" id="slider-4" oninput="slideFour()" class="price-slider">
+                              </div>
+                            </div>
+                          </div>
+                        <div class="filter-price-text">
+                          <p class="filter-mobile-price"></p>
+                        </div>
                           <div class="no-js-hidden mobile-facets__footer">
                             <facet-remove class="mobile-facets__clear-wrapper">
                               <a href="{{ filter.url_to_remove }}" class="mobile-facets__clear underlined-link">
-                                {{- 'products.facets.clear' | t -}}
+                                {%- comment -%}{{- 'products.facets.clear' | t -}}{%- endcomment -%}Clear All
                               </a>
                             </facet-remove>
                             <button
                               type="button"
                               class="no-js-hidden button button--primary"
-                              onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
+                              oncli3ck="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
                             >
-                              {{ 'products.facets.apply' | t }}
+                              {%- comment -%}{{ 'products.facets.apply' | t }}{%- endcomment -%} Filter
                             </button>
                             <noscript
                               ><button class="button button--primary">
@@ -972,11 +1011,12 @@
                           id="SortBy-mobile"
                           aria-describedby="a11y-refresh-page-message"
                         >
+                          <option selected disabled>sort by</option>
                           {%- for option in results.sort_options -%}
                             <option
                               value="{{ option.value | escape }}"
                               {% if option.value == sort_by %}
-                                selected="selected"
+                          
                               {% endif %}
                             >
                               {{ option.name | escape }}
@@ -1001,7 +1041,7 @@
                   class="no-js-hidden button button--primary"
                   onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
                 >
-                  {{ 'products.facets.apply' | t }}
+                 {%- comment -%}{{ 'products.facets.apply' | t }}{%- endcomment -%} Filter
                 </button>
                 <noscript
                   ><button class="button button--primary">{{ 'products.facets.apply' | t }}</button></noscript
@@ -1085,6 +1125,7 @@
                 aria-describedby="a11y-refresh-page-message"
               >
                 {%- for option in results.sort_options -%}
+                  
                   <option
                     value="{{ option.value | escape }}"
                     {% if option.value == sort_by %}

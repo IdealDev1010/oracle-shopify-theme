@@ -44,7 +44,10 @@ menu-drawer > details[open] > summary::before {
 
 .js .menu-drawer {
   height: calc(100vh - 100%);
-  height: calc(var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%)));
+  height: 100vh;
+  width: 80%;
+  z-index: 99999999;
+  top: -28px;
 }
 
 .js details[open] > .menu-drawer,
@@ -91,6 +94,8 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__navigation {
   padding: 3rem 0;
+  position: relative;
+  top: 28px;
 }
 
 .menu-drawer__inner-submenu {
@@ -161,7 +166,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__menu-item > .icon-arrow {
   position: absolute;
-  right: 3rem;
+  left: 45%;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -247,6 +252,10 @@ details[open].menu-opening > .menu-drawer__submenu {
   margin-right: 1rem;
 }
 
+.menu-drawer__account .icon-account * {
+  stroke: #000 !important;
+}
+
 .menu-drawer__account:hover .icon-account {
   transform: scale(1.07);
 }
@@ -263,3 +272,4 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer .list-social__link {
   padding: 1.1rem 1.1rem;
 }
+

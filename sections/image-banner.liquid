@@ -29,6 +29,15 @@
   }
 {%- endstyle -%}
 
+  {%- style -%}
+   #Banner-{{ section.id }} .banner__content{
+    height: {{ section.settings.image_desktop_height }}rem;
+  }
+  #Banner-{{ section.id }} .banner__content{
+    height: {{ section.settings.image_mobile_height }}rem;
+  } 
+  {%- endstyle -%}
+
 {%- liquid
   assign full_width = '100vw'
   assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
@@ -59,8 +68,11 @@
     <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       {%- liquid
         assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
+        if section.settings.mobile_image != blank
+          assign image_class = 'small-hide'
+        endif
         if section.settings.image_2 != blank
-          assign image_class = 'banner__media-image-half'
+          assign image_class = image_class | append: 'banner__media-image-half'
         endif
         if section.settings.image_2 != blank and section.settings.stack_images_on_mobile
           assign sizes = stacked_sizes
@@ -81,6 +93,30 @@
           widths: widths,
           fetchpriority: fetch_priority
       }}
+      {% if section.settings.mobile_image != blank %}
+        {%- liquid
+          assign image_height = section.settings.mobile_image.width | divided_by: section.settings.mobile_image.aspect_ratio
+          assign image_class = 'large-up-hide medium-hide'
+          if section.settings.image_2 != blank and section.settings.stack_images_on_mobile
+            assign sizes = stacked_sizes
+          elsif section.settings.image_2 != blank
+            assign sizes = half_width
+          else
+            assign sizes = full_width
+          endif
+        -%}
+        {{
+          section.settings.mobile_image
+          | image_url: width: 3840
+          | image_tag:
+            width: section.settings.mobile_image.width,
+            height: image_height,
+            class: image_class,
+            sizes: sizes,
+            widths: widths,
+            fetchpriority: fetch_priority
+        }}
+      {% endif %}
     </div>
   {%- elsif section.settings.image_2 == blank -%}
     <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
@@ -142,7 +178,7 @@
                   {% else %}
                     href="{{ block.settings.button_link_1 }}"
                   {% endif %}
-                  class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+                  class="button{% if block.settings._1 %} button--secondary{% else %} button--primary{% endif %}"
                 >
                   {{- block.settings.button_label_1 | escape -}}
                 </a>
@@ -186,6 +222,11 @@
       "label": "t:sections.image-banner.settings.image_2.label"
     },
     {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    },
+    {
       "type": "range",
       "id": "image_overlay_opacity",
       "min": 0,
@@ -194,6 +235,26 @@
       "unit": "%",
       "label": "t:sections.image-banner.settings.image_overlay_opacity.label",
       "default": 0
+    },
+    {
+      "type": "range",
+      "id": "image_desktop_height",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "rem",
+      "label": "Image Desktop Height",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "image_mobile_height",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "rem",
+      "label": "Image Mobile Height",
+      "default": 50
     },
     {
       "type": "select",

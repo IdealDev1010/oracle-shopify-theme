@@ -182,7 +182,7 @@
       "filter_and_operator_subtitle": "Match all",
       "apply": "Apply",
       "clear": "Clear",
-      "clear_all": "Remove all",
+      "clear_all": "CLEAR FILTER",
       "from": "From",
       "filter_and_sort": "Filter and sort",
       "filter_by_label": "Filter:",
@@ -406,7 +406,7 @@
       "delete": "Delete",
       "delete_confirm": "Are you sure you wish to delete this address?"
     },
-    "log_in": "Log in",
+    "log_in": "Account",
     "log_out": "Log out",
     "login_page": {
       "cancel": "Cancel",

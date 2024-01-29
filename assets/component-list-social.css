@@ -1,12 +1,14 @@
 .list-social {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 18px;
+ 
 }
 
-@media only screen and (max-width: 749px) {
+@media  screen and (max-width: 749px) {
   .list-social {
     justify-content: center;
+    flex-wrap: unset;
   }
 }
 
@@ -18,7 +20,6 @@
 .list-social__link {
   align-items: center;
   display: flex;
-  padding: 1.1rem;
   color: rgb(var(--color-foreground));
 }
 

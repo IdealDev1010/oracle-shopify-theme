@@ -6,4 +6,13 @@
     line-height: 22px; /* 157.143% */
     padding: 11px 0;
 }
-
+@media (max-width: 767px) {
+    .announcement-bar__message { 
+        text-align: center;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        padding: 5px 0px;
+    }
+}
