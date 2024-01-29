@@ -1,0 +1,126 @@
+.cgt-desc {
+    font-family: Arial;
+}
+
+.cgt-content {
+    max-width: 610px;
+    min-height: 140px;
+}
+
+.cgt-content .tab .active {
+    width: 100%;
+    height: 100%;
+}
+
+.cgt-desc ul.tabs {
+    margin: 0px;
+    padding: 0px;
+    border-radius: 0px;
+    top: 1px;
+    padding-bottom: 20px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.clearfix {
+
+    clear: both;
+
+}
+
+.cgt-desc ul li {
+
+    background-color: #fff;
+
+    display: inline-block;
+
+    position: relative;
+
+    z-index: 0;
+
+    border-radius: 0px;
+
+    margin: 0 -5px;
+
+    padding: 0;
+
+}
+
+.cgt-desc ul li:first-child {
+
+    margin: 0px;
+
+}
+
+.cgt-desc ul li a {
+    padding: 0px 0px;
+    text-decoration: none;
+    color: #999;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    /* 144.444% */
+    letter-spacing: 1.08px;
+    text-transform: uppercase;
+}
+
+.cgt-desc ul li a.active {
+
+    background: #fafafa;
+    border-bottom: 1px solid;
+    padding-bottom: 25px;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 1.08px;
+    text-transform: uppercase;
+}
+
+
+
+.cgt-desc .tab {
+    display: block;
+    border-top: 1px solid #D8D8D8;
+    padding: 0px;
+    padding-top: 20px;
+    background: #fafafa;
+    font-size: 14px;
+    border-radius: 0px;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: 0.32px;
+}
+
+.cgt-desc .tab p {
+    margin: 0px;
+
+}
+
+@media (max-width:1350px) {
+    .tabs.clearfix {
+        flex-direction: column;
+    }
+    
+    .cgt-desc ul li a.active {
+
+        background: #fafafa;
+        text-decoration: none;
+        text-decoration: solid;
+        color: #000;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 1.08px;
+        text-transform: uppercase;
+    }
+}
