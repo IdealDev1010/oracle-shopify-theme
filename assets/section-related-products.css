@@ -3,5 +3,13 @@
 }
 
 .related-products__heading {
-  margin: 0 0 3rem;
-}
+  margin: 0 0 4rem;
+  color: var(--Black-Primary, #000);
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 64px; /* 133.333% */
+  letter-spacing: 0.96px;
+  text-transform: capitalize;
+  }

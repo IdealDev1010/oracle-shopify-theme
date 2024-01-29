@@ -1,0 +1,22 @@
+<div class="breadcrumbs">
+    <a href="/">Home</a>
+    <span class="breadcrumbs_address"> > </span>
+    {% case template.name %}
+        {% when 'list-collections' %}
+           Jewelry<span class="breadcrumbs_address"> > </span><a href="{{ collections.url }}">collections</a>
+        {% when 'collection.secondary' %}
+            <a href="{{ collection.secondary.url }}">{{ collection.secondary.title }}</a>
+        {% when 'collection' %}
+         <a href="{{ collection.url }}">{{ collection.title }}</a>
+        {% when 'product' %}
+            {%- unless collection -%}
+                {%- assign p = all_products[product.handle] -%}
+                {%- assign collection = p.collections | first -%}
+            {%- endunless -%}
+            Jewelry<span class="breadcrumbs_address"> > </span> <a href="{{ collection.url }}">{{ collection.title }}</a> <span class="breadcrumbs_address"> > </span><a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+        {% when 'page' %}
+           <a href="{{ page.url }}">{{ page.title }}</a>
+        {% else %}
+            
+    {% endcase %}
+</div>

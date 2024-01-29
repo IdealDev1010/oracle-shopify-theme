@@ -1,0 +1,53 @@
+{{ 'feature-product.css' | asset_url | stylesheet_tag }}
+
+<div class="feature-product">
+    <div class="feature-product-wrapper page-width">
+        <div class="feature-product__image">
+            <img src="{{ section.settings.product.featured_image | img_url: '750x750'}}" alt="{{ section.settings.product.title | escape }}" />
+        </div>
+
+        <div class="feature-product__attr">
+            <div class="feature-product__attr-container">
+                <h1 class="feature-product__title">         
+                        {{ section.settings.product.title }}
+                </h1>
+                <div class="feature-product__description">
+                    {%- if section.settings.product.description != blank -%}
+                        {{ section.settings.product.description }}
+                    {%- endif -%}
+                </div>
+                <div class="product-form__input-box">
+                    <select name="id" class="product-form__input">
+                        {% for variant in section.settings.product.variants %}
+                            <option value="{{ variant.id }}">{{ variant.price | money }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+               <div class="feature-product__button"><a href="{{ section.settings.product.url }}" >Buy Now</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "feature product",
+        "class": "feature-product",
+        "settings": [
+            {
+                "type": "product",
+                "id": "product",
+                "label": "Select product"
+            }
+           
+          ],
+          "presets": [
+            {
+              "name": "feature product"
+            }
+          ]
+                
+          
+    }
+{% endschema %}

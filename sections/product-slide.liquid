@@ -1,0 +1,53 @@
+{{'product-slide.css' | asset_url |stylesheet_tag}}
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" />
+</head>
+<div class="product-slide__content swiper" id="swiper1">
+    <div class="product-slide__wrapper swiper-wrapper">
+        {% for product in section.settings.collection.products %}
+            {% for image in product.images %}
+                <div class="product__image swiper-slide"> <a href="{{product.url}}"><img src="{{ image.src | img_url: '500x600' }}"/></a></div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+   
+    <div class="swiper-btn-prev">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-arrow" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <rect x="0.5" y="0.5" width="39" height="39" fill="white" stroke="#D8D8D8"/>
+            <path d="M17.0739 15.9606C17.0266 15.9137 17 15.8498 17 15.7831C17 15.7165 17.0266 15.6526 17.0739 15.6057L17.6039 15.0757C17.6492 15.0274 17.7125 15 17.7788 15C17.8451 15 17.9084 15.0274 17.9538 15.0757L22.5481 19.6701C22.6184 19.7403 22.658 19.8356 22.6581 19.935V20.065C22.658 20.1644 22.6184 20.2597 22.5481 20.33L17.9538 24.9243C17.9084 24.9726 17.8451 25 17.7788 25C17.7125 25 17.6492 24.9726 17.6039 24.9243L17.0739 24.3943C17.0266 24.3474 17 24.2835 17 24.2169C17 24.1502 17.0266 24.0863 17.0739 24.0394L21.1133 20L17.0739 15.9606Z" fill="black"/>
+          </svg>
+    </div>
+    <div class="swiper-btn-next">
+             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-arrow" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <rect x="0.5" y="0.5" width="39" height="39" fill="white" stroke="#D8D8D8"/>
+            <path d="M17.0739 15.9606C17.0266 15.9137 17 15.8498 17 15.7831C17 15.7165 17.0266 15.6526 17.0739 15.6057L17.6039 15.0757C17.6492 15.0274 17.7125 15 17.7788 15C17.8451 15 17.9084 15.0274 17.9538 15.0757L22.5481 19.6701C22.6184 19.7403 22.658 19.8356 22.6581 19.935V20.065C22.658 20.1644 22.6184 20.2597 22.5481 20.33L17.9538 24.9243C17.9084 24.9726 17.8451 25 17.7788 25C17.7125 25 17.6492 24.9726 17.6039 24.9243L17.0739 24.3943C17.0266 24.3474 17 24.2835 17 24.2169C17 24.1502 17.0266 24.0863 17.0739 24.0394L21.1133 20L17.0739 15.9606Z" fill="black"/>
+          </svg>
+    </div>
+    
+</div>
+<script src="{{ 'product-slide.js' | asset_url }}" defer="defer"></script>
+{% schema %}
+{
+    "name": "product slide",
+    "class": "product-slide",
+    "settings": [
+        {
+            "type": "collection",
+            "id": "collection",
+            "label": "Select collection"
+        }
+       
+      ],
+      "presets": [
+        {
+          "name": "product slide"
+        }
+      ]
+            
+      
+}
+{% endschema %}
+

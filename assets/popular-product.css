@@ -71,6 +71,7 @@
     letter-spacing: 1.08px;
     text-transform: uppercase;
     margin: 0px;
+    cursor: pointer;
 }
 
 @media (max-width:767px) {

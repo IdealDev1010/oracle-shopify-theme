@@ -22,8 +22,10 @@
       {{ block.shopify_attributes }}
     >
       {%- for option in product.options_with_values -%}
-        <fieldset class="js product-form__input">
-          <legend class="form__label">{{ option.name }}</legend>
+        <fieldset class="js product-form__input" data-option="{{ option.name | handle }}">
+          <span><legend class="form__label">Choose 
+          
+          {{ option.name }}:</legend></span>
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
       {%- endfor -%}
@@ -120,3 +122,27 @@
     </div>
   </div>
 </noscript>
+
+{% for option in product.options_with_values %}
+  {% if option.name == 'Size' %}
+    <div class="product-form__select">
+      <label for="product-form-size">Choose Size:</label>
+      <select class="select" id="product-form-size">
+        {% for value in option.values %}
+          <option
+      value="{{ value | escape }}"
+      {% if option.selected_value == value %}
+        selected
+      {% endif %}
+    >
+      {% if option_disabled -%}
+        {{- 'products.product.value_unavailable' | t: option_value: value -}}
+      {%- else -%}
+        {{- value -}}
+      {%- endif %}
+    </option>
+        {% endfor %}
+      </select>
+    </div>
+  {% endif %}
+{% endfor %}

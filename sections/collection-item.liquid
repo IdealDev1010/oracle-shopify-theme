@@ -1,0 +1,64 @@
+{{ 'collection-item.css'| asset_url | stylesheet_tag }}
+
+<div class="collection-item-content">
+    <div class="collection-item__wrapper page-width">
+        <div class="collection-item__component">
+            <a href="{{section.settings.collection.url}}">
+                <img src="{{section.settings.collection.image.src | img_url: '600x600' }}">
+                <div class="collection-item__description">
+                    <p class="collection-item__title">{{section.settings.collection.title }}</p>
+                    <div class="collection-item__button">{% render 'icon-arrow-right-light' %}</div>
+                </div>
+            </a>
+        </div>
+        <div class="collection-item__products">
+            <ul class="collection-products">
+                {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+                    <li
+                    id="collection_product_item"
+                    class="collection-product__item"
+                    >
+                    {% render 'card-product',
+                        card_product: product,
+                        image_shape: section.settings.image_shape,
+                        show_secondary_image: section.settings.show_secondary_image,
+                        show_vendor: section.settings.show_vendor,
+                        show_rating: section.settings.show_rating,
+                        show_quick_add: section.settings.enable_quick_add,
+                        section_id: section.id
+                    %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "collection item",
+        "class": "collecton-item",
+        "settings": [
+            {
+                "type": "collection",
+                "id": "collection",
+                "label": "Select collection"
+            },
+            {
+                "type": "range",
+                "id": "products_to_show",
+                "min": 2,
+                "max": 25,
+                "step": 1,
+                "default": 4,
+                "label": "products to show"
+            }
+           
+          ],
+          "presets": [
+            {
+              "name": "collection item"
+            }
+          ]
+    }
+{% endschema %}

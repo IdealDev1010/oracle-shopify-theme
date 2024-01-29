@@ -4,10 +4,54 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "link_list_3YGWGP": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Jewelry",
+            "menu": "footer1-menu"
+          }
+        },
+        "link_list_fLcgGb": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Collections",
+            "menu": "footer2-menu"
+          }
+        },
+        "link_list_WpAPEn": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Company",
+            "menu": "footer3-menu"
+          }
+        },
+        "text_H7yTX6": {
+          "type": "text",
+          "settings": {
+            "heading": "Follow Us",
+            "subtext": ""
+          }
+        },
+        "text_THRgfQ": {
+          "type": "text",
+          "settings": {
+            "heading": "Our Story",
+            "subtext": "<p>The brand is experimenting with design, which is reflected in new collections. The style of jewelry organically echoes fashion trends, emphasizing the trendy modern sound.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_3YGWGP",
+        "link_list_fLcgGb",
+        "link_list_WpAPEn",
+        "text_H7yTX6",
+        "text_THRgfQ"
+      ],
       "settings": {
         "color_scheme": "background-1",
-        "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
+        "newsletter_enable": false,
+        "newsletter_heading": "",
         "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": true,
@@ -15,8 +59,8 @@
         "payment_enable": true,
         "show_policy": false,
         "margin_top": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 52,
+        "padding_bottom": 0
       }
     }
   },

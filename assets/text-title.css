@@ -4,9 +4,7 @@
     font-weight: 600;
     line-height: 70px; /* 116.667% */
     letter-spacing: 1.2px;
-    margin: 0px;
     margin-bottom: 120px;
-
 }
 
 
@@ -15,8 +13,6 @@
 }
 .text-title p {
     text-align: left;
-    display: flex;
-    justify-content: center;
     margin: 0px;
 }
 @media (max-width:1350px) {
@@ -35,7 +31,14 @@
     }
 
     .text-title p {
-       font-size: 25px;
-       text-align: center;
+       font-size: 24px;
+       font-style: normal;
+       font-weight: 600;
+       line-height: 32px; /* 133.333% */
+       letter-spacing: 0.48px;
+    }
+
+    .text-title {
+        margin-bottom: 30px;
     }
 }

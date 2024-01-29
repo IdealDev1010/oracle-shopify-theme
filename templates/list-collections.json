@@ -6,12 +6,67 @@
         "title": "Collections",
         "sort": "alphabetical",
         "image_ratio": "square",
-        "columns_desktop": 3,
+        "columns_desktop": 2,
         "columns_mobile": "2"
+      }
+    },
+    "text_title_76gB48": {
+      "type": "text-title",
+      "settings": {
+        "title": "<p>Minimalism and simplicity combined with interesting shapes. Choose a piece of jewelry that you like.<\/p>"
+      }
+    },
+    "image_with_text_yf3HBe": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_xQdA7a": {
+          "type": "heading",
+          "settings": {
+            "heading": "Newsletter",
+            "heading_size": "h2"
+          }
+        },
+        "text_TRTJhK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sign up for exclusive deals and early access to new products.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "email_pMi6NM": {
+          "type": "email",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_xQdA7a",
+        "text_TRTJhK",
+        "email_pMi6NM"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_5.png",
+        "Gift_card": true,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_mob_top": 36,
+        "padding_mob_bottom": 36
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "text_title_76gB48",
+    "image_with_text_yf3HBe"
   ]
 }

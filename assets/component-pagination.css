@@ -1,12 +1,8 @@
 .pagination-wrapper {
-  margin-top: 4rem;
+  margin-top: 0rem;
 }
 
-@media screen and (min-width: 990px) {
-  .pagination-wrapper {
-    margin-top: 5rem;
-  }
-}
+
 
 .pagination__list {
   display: flex;
@@ -17,10 +13,13 @@
 .pagination__list > li {
   flex: 1 0 4.4rem;
   max-width: 4.4rem;
+  
 }
 
+
+
 .pagination__list > li:not(:last-child) {
-  margin-right: 1rem;
+  margin-right: 0.8rem;
 }
 
 .pagination__item {
@@ -29,10 +28,11 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 4.4rem;
+  height: 4rem;
   width: 100%;
   padding: 0;
   text-decoration: none;
+  border: 1px solid #d8d8d8;
 }
 
 a.pagination__item:hover::after {
@@ -47,9 +47,14 @@ a.pagination__item:hover::after {
   height: 0.1rem;
 }
 
+.pagination__item--current {
+  background: #000;
+  color: #fff;
+}
+
 .pagination__item--current::after,
 .pagination__item:hover::after {
-  content: '';
+  
   display: block;
   width: 2rem;
   position: absolute;
@@ -61,22 +66,21 @@ a.pagination__item:hover::after {
 
 .pagination__item--next .icon {
   margin-left: -0.2rem;
-  transform: rotate(90deg);
+  transform: rotate(180deg);
 }
 
-.pagination__item--next:hover .icon {
-  transform: rotate(90deg) scale(1.07);
-}
+
 
 .pagination__item--prev .icon {
   margin-right: -0.2rem;
-  transform: rotate(-90deg);
 }
 
-.pagination__item--prev:hover .icon {
-  transform: rotate(-90deg) scale(1.07);
-}
 
-.pagination__item-arrow:hover::after {
+.pagination__item-arrow::after {
   display: none;
+  border: none;
+}
+
+.pagination__item-arrow {
+  border: none;
 }

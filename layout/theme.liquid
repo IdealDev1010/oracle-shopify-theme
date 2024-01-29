@@ -27,7 +27,7 @@
     {% endif %}
 
     {% render 'meta-tags' %}
-
+    <script src="//code.jquery.com/jquery-1.11.3.js"></script>
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
@@ -251,7 +251,12 @@
       }
     {% endstyle %}
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
 
     {%- unless settings.type_body_font.system? -%}
@@ -284,9 +289,9 @@
   </head>
 
   <body class="gradient template--{{template.name}}{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
-    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
+    {% comment %} <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
-    </a>
+    </a> {% endcomment %}
 
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}

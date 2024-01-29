@@ -31,12 +31,23 @@
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
     {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
       <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden">
+        
+        <div class="field-search"> 
+          <input class="field__input search-input" type="text" id="filterSearchInput" placeholder="Search">
+          <label onclick="searchFilter()" class="field__search"> 
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-search" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="9" cy="9" r="8" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15.0183 15.4851L18.5423 19" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </label>
+        </div>
+
         <form class="facets-vertical-form" id="FacetSortForm">
           <div class="facet-filters sorting caption">
             <div class="facet-filters__field">
-              <h2 class="facet-filters__label caption-large text-body">
+             {%- comment -%} <h2 class="facet-filters__label caption-large text-body">
                 <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
-              </h2>
+              </h2>{%- endcomment -%}
               <div class="select">
                 {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
                 <select
@@ -45,11 +56,11 @@
                   id="SortBy"
                   aria-describedby="a11y-refresh-page-message"
                 >
-                  {%- for option in collection.sort_options -%}
-                    <option
+                  <option selected disabled>sort By</option>
+                  {%- for option in collection.sort_options -%}                  
+                   <option
                       value="{{ option.value | escape }}"
                       {% if option.value == sort_by %}
-                        selected="selected"
                       {% endif %}
                     >
                       {{ option.name | escape }}
@@ -64,6 +75,7 @@
                 {{ 'products.facets.sort_button' | t }}
               </button>
             </noscript>
+
           </div>
 
           <div class="product-count-vertical light" role="status">
@@ -192,7 +204,7 @@
       "id": "products_per_page",
       "min": 8,
       "max": 24,
-      "step": 4,
+      "step": 1,
       "default": 16,
       "label": "t:sections.main-collection-product-grid.settings.products_per_page.label"
     },

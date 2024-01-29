@@ -1,0 +1,55 @@
+{{ 'photo-category.css' | asset_url | stylesheet_tag}}
+
+<div class="photo-category">
+    <div class="photo-category-container page-width">
+        <div class="individual-photo">
+            <img src="{{ section.settings.photo | image_url: width: 500 }}"
+                 alt="{{ section.settings.photo.alt | escape }}">
+        </div>
+        <div class="photo-category__group">
+            {% for block in section.blocks %}
+                <div class="photo-category-part">
+                    <img src="{{ block.settings.image | image_url: width: 500 }}"
+                         alt="{{ block.settings.image.alt | escape }}">
+
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "photo category",
+        "class": "photo-category",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "photo",
+                "label": "photo"
+            }
+          
+        ],
+
+        "blocks": [
+            {
+                "type": "photo-category-part",
+                "name": "photo category part",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    }
+                ]
+                
+            }
+        ],
+
+        "presets": [
+            {
+              "name": "photo-category"
+            }
+          ]
+    }
+{% endschema %}

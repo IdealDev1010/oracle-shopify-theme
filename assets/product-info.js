@@ -98,3 +98,15 @@ if (!customElements.get('product-info')) {
     }
   );
 }
+
+
+
+document.getElementById('product-form-size').onchange = function(){
+    var optionValue =this.value;
+    const inputs = document.querySelectorAll('[data-option="size"] input');
+    inputs.forEach((input) => {
+      if(input.value == optionValue) {
+        input.nextElementSibling.click();
+      }
+    });
+}

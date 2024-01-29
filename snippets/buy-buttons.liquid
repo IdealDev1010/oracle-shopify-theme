@@ -84,6 +84,7 @@
               disabled
             {% endif %}
           >
+            {% render 'icon-cart' %}
             <span>
               {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
@@ -94,7 +95,11 @@
             {%- render 'loading-spinner' -%}
           </button>
           {%- if show_dynamic_checkout -%}
-            {{ form | payment_button }}
+            <button type="button" class="shopify-payment-button__button shopify-payment-button__button--unbranded" onclick="document.querySelector('[data-testid]').click();">Buy now</button>
+            <div style="display:none;">
+                {{ form | payment_button }}
+            </div>
+           
           {%- endif -%}
         </div>
       {%- endform -%}
