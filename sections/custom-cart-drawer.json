@@ -6,7 +6,7 @@
       "type": "cart-drawer",
       "settings": {
         "show_policy": false,
-        "description": "<p>text<p>"
+        "description": "<p>Please check this box to agree to our <a href=\"\/policies\/terms-of-service\" target=\"_blank\" title=\"Terms of Service\">terms and conditions<\/a><\/p>"
       }
     }
   },
