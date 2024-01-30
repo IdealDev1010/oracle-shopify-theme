@@ -1785,3 +1785,6 @@ a.product__text {
   margin-bottom: 40px;
 }
 
+.price-per-item__container .quantity {
+  max-width: 203px;
+}
