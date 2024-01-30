@@ -1846,7 +1846,7 @@ details[open] > .share-button__fallback {
 
 input[type='checkbox'] {
   display: inline-block;
-  width: auto;
+  /* width: auto; */
   margin-right: 0.5rem;
 }
 
@@ -1918,8 +1918,8 @@ input[type='checkbox'] {
   width: calc(14rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
   display: flex;
   border-radius: var(--inputs-radius);
-  min-height: calc((var(--inputs-border-width) * 2) + 4.5rem);
-  max-width: 204px;
+  min-height: 36px;
+  /* max-width: 204px; */
   width: 100%;
 }
 
