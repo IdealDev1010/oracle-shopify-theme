@@ -148,7 +148,13 @@ quantity-popover:has(.quantity__input:focus-visible) .quantity-popover__info {
 
 quantity-popover .quantity {
   background: rgb(var(--color-background));
-}
+  color:  #707070;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 168.75% */
+  }
 
 quantity-popover .quantity__rules {
   margin-left: 0.8rem;
@@ -161,4 +167,10 @@ quantity-popover .quantity__rules .divider:nth-child(2)::before {
 quantity-popover .quantity__button:not(:focus-visible):not(.focused),
 quantity-popover .quantity__input:not(:focus-visible):not(.focused) {
   background-color: initial;
+  color:  #707070;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 168.75% */
 }

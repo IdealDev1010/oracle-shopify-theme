@@ -293,11 +293,11 @@
       {{ 'accessibility.skip_to_text' | t }}
     </a> {% endcomment %}
 
-    {%- if settings.cart_type == 'drawer' -%}
-      {%- render 'cart-drawer' -%}
-    {%- endif -%}
-
     {% sections 'header-group' %}
+
+    {%- if settings.cart_type == 'drawer' -%}
+      {%- sections 'custom-cart-drawer' -%}
+    {%- endif -%}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}

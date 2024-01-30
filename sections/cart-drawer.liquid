@@ -1,1 +1,31 @@
-{%- render 'cart-drawer' -%}
+{%- render 'cart-drawer', policy: section.settings.show_policy, description: section.settings.description -%}
+
+
+{% schema %}
+    {
+        "name": "cart drawer",
+        "class": "cart-drawer",
+        "settings": [
+            {
+                "type": "checkbox",
+                "id": "show_policy",
+                "default": false,
+                "label": "show policy"
+            },
+            {
+                "type": "richtext",
+                "id": "description",
+                "default": "<p>text<p>",
+                "label": "Description"
+            }
+        ],
+        "blocks": [
+        ],
+
+        "presets": [
+        {
+            "name": "cart policy"
+        }
+        ]
+    }
+{% endschema %}
