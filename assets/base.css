@@ -3524,3 +3524,12 @@ details-disclosure > details {
 .collection__product-item2:not(.active) {
   display: none;
 }
+
+@media screen and (min-width: 750px){
+  .blog-articles {
+      grid-template-columns: 1fr 1fr 1fr !important;
+  }
+  .blog-articles--collage>*:nth-child(3n + 1){
+      grid-column: span 1 !important;
+  }
+  }

@@ -252,6 +252,22 @@ font-weight: 300;
 line-height: 24px; /* 150% */
 letter-spacing: 0.32px;
 }
+
+.article-card-wrapper .card__heading a {
+  color:#000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px; /* 108.333% */
+  letter-spacing: 0.48px;
+  text-align: left;
+}
+
+.article-card-wrapper .card-information {
+  text-align: left;
+}
+
+
 .card__heading a::after {
   bottom: 0;
   content: '';

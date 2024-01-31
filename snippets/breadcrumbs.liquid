@@ -1,3 +1,4 @@
+{{ 'breadcrumbs.css'| asset_url | stylesheet_tag}}
 <div class="breadcrumbs">
     <a href="/">Home</a>
     <span class="breadcrumbs_address"> > </span>
@@ -16,6 +17,8 @@
             Jewelry<span class="breadcrumbs_address"> > </span> <a href="{{ collection.url }}">{{ collection.title }}</a> <span class="breadcrumbs_address"> > </span><a href="{{ product.url | within: collection }}">{{ product.title }}</a>
         {% when 'page' %}
            <a href="{{ page.url }}">{{ page.title }}</a>
+           {% when 'blog' %}
+            <a href="{{ blog.url }}">{{ blog.title }}</a>
         {% else %}
             
     {% endcase %}
