@@ -1,6 +1,7 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
 <article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
+  {% render 'breadcrumbs' %}
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when '@app' -%}
@@ -14,7 +15,7 @@
             {{ block.shopify_attributes }}
           >
             <div
-              class="article-template__hero-{{ block.settings.image_height }} media"
+              class="page-width article-template__hero-{{ block.settings.image_height }} media"
               itemprop="image"
               {% if block.settings.image_height == 'adapt' and article.image %}
                 style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"
@@ -100,29 +101,30 @@
         {%- if article.comments_count > 0 -%}
           {%- assign anchorId = '#Comments-' | append: article.id -%}
 
-          <h2 id="Comments-{{ article.id }}" tabindex="-1">
-            {{ 'blogs.article.comments' | t: count: article.comments_count }}
+          <h2 class="article-comments" id="Comments-{{ article.id }}" tabindex="-1">Comments
+            {% comment %} {{ 'blogs.article.comments' | t: count: article.comments_count }} {% endcomment %}
           </h2>
           {% paginate article.comments by 5 %}
             <div class="article-template__comments">
               {%- if comment.status == 'pending' and comment.content -%}
                 <article id="{{ comment.id }}" class="article-template__comments-comment">
-                  {{ comment.content }}
                   <footer class="right">
                     <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span>
                   </footer>
+                  {{ comment.content }}
                 </article>
               {%- endif -%}
 
               {%- for comment in article.comments -%}
                 <article id="{{ comment.id }}" class="article-template__comments-comment">
-                  {{ comment.content }}
+                  
                   <footer class="right">
                     <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span
                     ><span class="caption-with-letter-spacing">
                       {{- comment.created_at | time_tag: format: 'date' -}}
                     </span>
                   </footer>
+                  {{ comment.content }}
                 </article>
               {%- endfor -%}
               {% render 'pagination', paginate: paginate, anchor: anchorId %}
@@ -193,8 +195,8 @@
                 >
                 <label class="field__label" for="CommentForm-author">
                   {{- 'blogs.article.name' | t }}
-                  <span aria-hidden="true">*</span></label
-                >
+                  {% comment %} <span aria-hidden="true">*</span> {% endcomment %}
+                </label>
                 {%- if form.errors contains 'author' -%}
                   <small id="CommentForm-author-error">
                     <span class="form__message">
@@ -225,8 +227,8 @@
                 >
                 <label class="field__label" for="CommentForm-email">
                   {{- 'blogs.article.email' | t }}
-                  <span aria-hidden="true">*</span></label
-                >
+                  {% comment %} <span aria-hidden="true">*</span> {% endcomment %}
+                  </label>
                 {%- if form.errors contains 'email' -%}
                   <small id="CommentForm-email-error">
                     <span class="form__message">
@@ -254,8 +256,8 @@
               >{{ form.body }}</textarea>
               <label class="form__label field__label" for="CommentForm-body">
                 {{- 'blogs.article.message' | t }}
-                <span aria-hidden="true">*</span></label
-              >
+                {% comment %} <span aria-hidden="true">*</span> {% endcomment %}
+                </label>
             </div>
             {%- if form.errors contains 'body' -%}
               <small id="CommentForm-body-error">
@@ -270,7 +272,7 @@
           {%- if blog.moderated? -%}
             <p class="article-template__comment-warning caption">{{ 'blogs.article.moderated' | t }}</p>
           {%- endif -%}
-          <input type="submit" class="button" value="{{ 'blogs.article.post' | t }}">
+          <input type="submit" class="article-template__button button" value="{{ 'blogs.article.post' | t }}">
         {% endform %}
       </div>
     </div>
