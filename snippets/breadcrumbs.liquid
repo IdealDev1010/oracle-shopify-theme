@@ -20,6 +20,10 @@
            {% when 'blog' %}
             <a href="{{ blog.url }}">{{ blog.title }}</a>
         {% else %}
-            
+        {% when 'article' %}
+            {{ blog.title | link_to: blog.url }}
+            <span class="breadcrumbs_address"> > </span>
+              <a href="{{ article.url }}" aria-current="page">{{ article.title }}</a>
+           
     {% endcase %}
 </div>

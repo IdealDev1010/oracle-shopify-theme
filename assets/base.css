@@ -185,7 +185,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 }
 
 .background-secondary {
-  background-color: rgba(var(--color-foreground), 0.04);
+  /* background-color: rgba(var(--color-foreground), 0.04); */
 }
 
 .grid-auto-flow {
@@ -396,7 +396,8 @@ blockquote {
   font-size: 1rem;
   letter-spacing: 0.13rem;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
+  
 }
 
 .caption-with-letter-spacing--medium {
@@ -429,14 +430,16 @@ table:not([class]) {
   border-collapse: collapse;
   font-size: 1.4rem;
   border-style: hidden;
-  box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.2);
+  /* box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.2); */
   /* draws the table border  */
 }
 
 table:not([class]) td,
 table:not([class]) th {
   padding: 1em;
-  border: 0.1rem solid rgba(var(--color-foreground), 0.2);
+  /* border: 0.1rem solid rgba(var(--color-foreground), 0.2); */
+  border-bottom: 1px solid rgba(153,153,153, 0.2);
+
 }
 
 @media screen and (max-width: 749px) {
@@ -466,7 +469,7 @@ table:not([class]) th {
 }
 
 .right {
-  text-align: right;
+  text-align: left;
 }
 
 .uppercase {
@@ -534,7 +537,7 @@ a:not([href]) {
 }
 
 .circle-divider::after {
-  content: '\2022';
+  /* content: '\2022'; */
   margin: 0 1.3rem 0 1.5rem;
 }
 
@@ -1430,10 +1433,15 @@ button.shopify-payment-button__button--unbranded {
   font-size: 1.4rem;
   display: flex;
   align-items: center;
-  color: rgb(var(--color-link));
   margin-left: 0;
   padding-left: 0;
-  min-height: 4.4rem;
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 144.444% */
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
 }
 
 details[open] > .share-button__fallback {
@@ -1840,7 +1848,7 @@ details[open] > .share-button__fallback {
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
-  min-height: 10rem;
+  min-height: 1rem;
   resize: none;
 }
 
