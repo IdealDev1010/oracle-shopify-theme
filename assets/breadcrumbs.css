@@ -6,3 +6,7 @@
     line-height: 22px; 
     text-decoration: none;
 }
+.breadcrumbs {
+    margin-top: 40px;
+    margin-left: 100px;
+}
