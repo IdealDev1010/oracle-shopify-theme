@@ -1,0 +1,268 @@
+
+@media (min-width:750px) {
+    .page-faq {
+        max-width: 798px;
+        margin: auto;
+        margin-bottom: 120px;
+    }    
+}
+.main-page-title {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 70px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+
+}
+.collapse {
+  display: none;
+}
+.collapse.show {
+  display: block;
+}
+.social-icons-style2 .social-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 18px;
+    overflow: hidden;
+    color: #213e59;
+    margin-top: 10px;
+}
+
+
+.social-icons-style2 .social-icon:hover {
+    color: #f4ad57;
+}
+
+.social-icons-style2 .social-icon svg {
+    height: 100%;
+    width: 100%;
+}
+
+.faqs-paragraph__footer {
+    text-align: right;
+    padding: 11px 13px 30px;
+}
+
+.card {
+    border: none;
+    margin-bottom: 15px;
+}
+
+.card .collapse {
+    position: relative;
+    padding: 0px;
+}
+
+.card-header {
+    border-radius: 0 !important;
+    position: relative;
+    background-color: #ffffff;
+    border: none;
+    padding: 0px;
+}
+
+.card-header .title {
+    width: 100%;
+    /* color: #274b4f; */
+    border: none;
+    text-transform: none;
+    background-color: #fff;
+    padding: 0px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.card-header .title h3 {
+    margin: 0;
+    padding: 30px 12px;
+    padding-right: 45px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    border-bottom:1px solid rgba(153,153,153,0.2);
+}
+
+.card-header .icon-plus {
+    top: 50%;
+    right: 10px;
+    width: 22px;
+    height: 19px;
+    border-radius: 50%;
+    z-index: 2;
+    pointer-events: none;
+    display: inline-block;
+    position: absolute;
+    transform: translateY(-50%);
+    background: #fafafa;
+}
+
+.card-header .icon-drawer {
+    top: 50%;
+    right: 10px;
+    z-index: 2px;
+    display: inline-block;
+    position: absolute;
+}
+
+.card-header .icon-plus:before {
+    top: 50%;
+    right: 50%;
+    z-index: 2;
+    content: "";
+    width: 2px;
+    height: 16px;
+    position: absolute;
+    transition: all 0.3s ease;
+    transform: translate(50%, -50%);
+    background-color: #274b4f;
+}
+
+.card-header .icon-drawer:before {
+    top: 50%;
+    right: 50%;
+    z-index: 2;
+    content: "";
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.card-header .icon-plus:after {
+    top: 50%;
+    right: 50%;
+    z-index: 2;
+    content: "";
+    width: 16px;
+    height: 2px;
+    position: absolute;
+    transform: translate(50%, -50%);
+    background-color: #274b4f;
+}
+
+.card-header .title:not(.collapsed) h3 {
+    position: relative;
+    border: none;
+}
+
+.card-header .title:not(.collapsed) h3:before {
+    top: -1px;
+    left: -1px;
+    z-index: 2;
+    content: "";
+    width: 5px;
+    height: 103%;
+    position: absolute;
+    transition: all 0.3s ease;
+    background-color: var(--color_btn_primary_bg);
+    border-radius: 2px 0px 0px 2px;
+}
+
+.card-header .title:not(.collapsed)+.icon-plus:before {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.card-header .title:not(.collapsed)+.icon-drawer:after {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.card-header .title:not(.collapsed)+.icon-drawer {
+    transform: rotate(90deg);
+}
+.card-body {
+    padding: 20px 0px 30px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    border-bottom: 1px solid rgba(153,153,153,0.2);
+}
+
+.card-body.rte p {
+    margin-bottom: 28px;
+
+}
+
+.card-body p:last-child {
+    margin-bottom: 0px;
+}
+
+.card-body p,
+.card-body span {
+    color: #5a5a5a;
+}
+
+.card .collapsing>span,
+.card .collapse>span {
+    width: 70px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #d2e0df;
+    color: #191919;
+    border-radius: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    top: 22px;
+    left: 0;
+}
+
+.card .collapsing>span+.card-body,
+.card .collapse>span+.card-body {
+    padding-left: 85px;
+}
+
+.faq-content {
+    padding: 30px 0;
+}
+
+.faq-group__item {
+    width: 50%;
+}
+
+.faq-group__item .icon {
+    display: block;
+    margin: 0 auto 6px auto;
+    width: 22px;
+    height: 22px;
+    color: #1e1e1e;
+    fill: #1e1e1e;
+}
+
+.faq-group__item .text {
+    color: #787878;
+    font-weight: 400;
+    text-transform: capitalize;
+    text-underline-position: under;
+    text-decoration: underline;
+}
+
+@media (min-width: 1025px) {
+
+    .faq-title {
+        padding-bottom: 1px;
+    }
+
+    .faq-content {
+        padding: 50px 0;
+    }
+
+    .faq-content a {
+        min-width: 250px;
+        margin: 0 0 0 25px;
+    }
+}
