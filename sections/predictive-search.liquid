@@ -55,6 +55,7 @@
               <a href="{{ collection.url }}" class="predictive-search__item link link--text" tabindex="-1">
                 <div class="predictive-search__item-content predictive-search__item-content--centered">
                   <p class="predictive-search__item-heading h5">{{ collection.title }}</p>
+                  <span class="predictive-search __item-price"> {{ collection.product.price | money }} </span>
                 </div>
               </a>
             </li>
@@ -192,6 +193,7 @@
                   <a href="{{ page.url }}" class="predictive-search__item link link--text" tabindex="-1">
                     <div class="predictive-search__item-content predictive-search__item-content--centered">
                       <p class="predictive-search__item-heading h5">{{ page.title }}</p>
+                    
                     </div>
                   </a>
                 </li>

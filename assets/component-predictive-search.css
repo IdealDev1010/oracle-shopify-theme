@@ -83,6 +83,7 @@ predictive-search[loading] .predictive-search {
   }
   .predictive-search__result-group:first-child {
     flex: 0 0 26.4rem;
+    display: none;
   }
   .predictive-search__results-groups-wrapper--no-products .predictive-search__result-group:first-child,
   .predictive-search__result-group:only-child {
@@ -95,6 +96,7 @@ predictive-search[loading] .predictive-search {
   margin: 0 2rem;
   padding: 1.5rem 0 0.75rem;
   color: rgba(var(--color-foreground), 0.7);
+  display: none;
 }
 
 predictive-search .spinner {
@@ -132,12 +134,13 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
 .predictive-search__item:hover {
   color: rgb(var(--color-foreground));
   background-color: rgba(var(--color-foreground), 0.04);
+
 }
 
 .predictive-search__list-item[aria-selected='true'] .predictive-search__item-heading,
 .predictive-search__list-item:hover .predictive-search__item-heading {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  /* text-decoration: underline;
+  text-underline-offset: 0.3rem; */
 }
 
 .predictive-search__item {
@@ -150,7 +153,7 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
 
 .predictive-search__item--link-with-thumbnail {
   display: grid;
-  grid-template-columns: 5rem 1fr;
+  grid-template-columns: 8rem 1fr;
   grid-column-gap: 2rem;
   grid-template-areas: 'product-image product-content';
 }
@@ -163,6 +166,7 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
 
 .predictive-search__item-content--centered {
   justify-content: center;
+  text-decoration: none;
 }
 
 .predictive-search__item-vendor {
@@ -171,6 +175,12 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
 
 .predictive-search__item-heading {
   margin: 0;
+  color: #3A3836;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 22px; /* 157.143% */
+  text-decoration: none;
 }
 
 .predictive-search__item-query-result *:not(mark) {
@@ -222,4 +232,6 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
   grid-area: product-image;
   object-fit: contain;
   font-family: 'object-fit: contain';
+  width: 100%;
+  height: auto;
 }
