@@ -85,6 +85,7 @@
 .card-header .title h3 {
     margin: 0;
     padding: 30px 12px;
+    padding-left: 0px;
     padding-right: 45px;
     font-size: 24px;
     font-weight: 600;
