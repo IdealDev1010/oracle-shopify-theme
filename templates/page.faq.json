@@ -43,16 +43,16 @@
         "09ee9ac0-6098-4c28-af7a-acabab05035d"
       ],
       "settings": {
-        "header_title": "Frequently Asked Questions",
-        "des_heading": "Below FAQ are some common concerns of our clients before purchasing the theme, if you have other questions, please just send it to stores@domain.com",
+        "header_title": "FAQ",
+        "des_heading": "",
         "link_1": "",
         "link_2": "",
         "show_faqs_1": true,
-        "faqs_1_title": "Pre-Sales Questions",
-        "show_faqs_2": true,
+        "faqs_1_title": "",
+        "show_faqs_2": false,
         "faqs_2_title": "Theme Questions",
-        "faq_text": "Unable to find satisfactory answers ?",
-        "btn_text": "Contact Support",
+        "faq_text": "",
+        "btn_text": "",
         "btn_text_link": "shopify:\/\/pages\/contact-us"
       }
     }
