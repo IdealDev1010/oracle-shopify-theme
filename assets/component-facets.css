@@ -47,6 +47,10 @@
   margin: 0 2rem 0 0;
 }
 
+.template-search .facet-filters__label {
+  display: none;
+}
+
 .facet-filters__summary {
   display: flex;
   align-items: center;
