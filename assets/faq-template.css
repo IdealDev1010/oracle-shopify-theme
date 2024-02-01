@@ -16,6 +16,13 @@
     margin-bottom: 50px;
 
 }
+
+.faqs-praagraph__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .collapse {
   display: none;
 }

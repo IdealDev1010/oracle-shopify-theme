@@ -20,7 +20,7 @@
             {% if section.settings.show_faqs_1 %}
                 <div class="faqs-paragraph">
                     <h3 class="faq-title">{{ section.settings.faqs_1_title }}</h3>
-                    <div id="accordion">
+                    <div id="accordion" class="faqs-praagraph__card">
                         {% assign index = 0 %}
                         {% for block in section.blocks %}
                             {% assign index = forloop.index0 %}
