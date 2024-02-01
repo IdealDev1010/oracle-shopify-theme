@@ -177,6 +177,10 @@
   padding-bottom: 20px;
 }
 
+.template-search .facets-vertical-sort {
+  justify-content: flex-end;
+}
+
 .facets-vertical-sort .field-search .field__search {
   position: absolute;
   top: 0px;
