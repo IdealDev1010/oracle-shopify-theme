@@ -30,6 +30,17 @@
   letter-spacing: 0.32px;
 }
 
+.predictive-search__item-content .price .price-item {
+  display: inline-block;
+  margin: 0 1rem 0 0;
+  color: #3A3836;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px; /* 157.143% */
+  letter-spacing: 0.28px;
+}
 .product__info-container .price__regular .price-item--regular {
   margin-right: 0;
   text-align: center;
