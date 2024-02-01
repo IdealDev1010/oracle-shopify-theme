@@ -1,15 +1,16 @@
 .search__input.field__input {
   padding-right: 9.8rem;
   border: 1px solid #D8D8D8;
-  font-size: 14px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: 22px; /* 157.143% */
+  padding: 30px 14px;
 }
 
 .search__button {
-  right: var(--inputs-border-width);
-  top: var(--inputs-border-width);
+  /* right: var(--inputs-border-width);
+  top: var(--inputs-border-width); */
 }
 
 .reset__button {
@@ -57,6 +58,7 @@
 .reset__button:not(:focus-visible):not(.focused) {
   box-shadow: inherit;
   background-color: inherit;
+  top: 10px;
 }
 
 .search__button:hover .icon,
