@@ -112,7 +112,7 @@
     "social_linkedin_link": "https:\/\/www.linkedin.com\/",
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
-    "predictive_search_show_price": false,
+    "predictive_search_show_price": true,
     "currency_code_enabled": false,
     "cart_type": "drawer",
     "show_vendor": false,
