@@ -2,6 +2,11 @@
   max-width: 100%;
 }
 
+.contact .field__input {
+  border: none;
+  border-bottom: 1px solid rgba(141,141,141, 0.2);
+}
+
 .contact .form__message {
   align-items: flex-start;
 }
@@ -14,6 +19,10 @@
   margin-bottom: 1.5rem;
 }
 
+.field__label span {
+  display: none;
+}
+
 @media screen and (min-width: 750px) {
   .contact .field {
     margin-bottom: 2rem;
@@ -22,6 +31,16 @@
 
 .contact__button {
   margin-top: 3rem;
+}
+
+.contact__button button {
+  width: 100%;
+  padding: 20px 0px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-align: center;
 }
 
 @media screen and (min-width: 750px) {
@@ -36,4 +55,33 @@
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 2rem;
   }
+}
+
+.contact-example {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+.contact-example-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-right: 50px;
+  
+}
+
+.contact-example__information {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-align: left;
+
+}
+
+.contact-example__icon {
+  font-size: 0;
 }
