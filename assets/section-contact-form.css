@@ -7,6 +7,10 @@
   border-bottom: 1px solid rgba(141,141,141, 0.2);
   
 }
+.contact .text-area {
+  overflow: hidden;
+}
+
 .contact .field__label{
   color: #999999;
   opacity: 0.7;
