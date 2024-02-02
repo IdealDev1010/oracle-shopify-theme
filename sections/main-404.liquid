@@ -1,23 +1,18 @@
-<style type="text/css">
-  .template-404 .title + * {
-    margin-top: 1rem;
-  }
+{{'main-404.css' | asset_url |stylesheet_tag }}
 
-  @media screen and (min-width: 750px) {
-    .template-404 .title + * {
-      margin-top: 2rem;
-    }
-  }
-</style>
 
 <div class="template-404 page-width page-margin center">
-  <p>
-    {{ 'templates.404.subtext' | t }}
-  </p>
-  <h1 class="title">
-    {{ 'templates.404.title' | t }}
-  </h1>
-  <a href="{{ routes.all_products_collection_url }}" class="button">
-    {{ 'general.continue_shopping' | t }}
-  </a>
+  <div class="template-404__content">
+    <h1 class="title">
+      {{ 'templates.404.title' | t }}
+    </h1>
+    <p class="description">The page you requested does not exist.</p>
+    <a href="{{ routes.all_products_collection_url }}" class="button">
+      {% comment %} {{ 'general.continue_shopping' | t }} {% endcomment %}
+      Homepage
+    </a>
+  </div>
+  <div class="template-404__subtext">
+    <img src="https://cdn.shopify.com/s/files/1/0601/8842/6287/files/404-img.png?v=1706842826">
+  </div>
 </div>
