@@ -1,0 +1,146 @@
+.template-404 .title + * {
+    margin-top: 1rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .template-404 .title + * {
+      /* margin-top: 2rem; */
+    }
+  }
+
+  
+  .template-404 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 160px;
+
+  }
+  
+  .template-404__subtext {
+    width: 50%;
+    padding-left: 19px;
+  }
+  .template-404__content {
+    width: 50%;
+    padding-right: 19px;
+    text-align: left;
+  }
+
+  .template-404__content h1 {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 70px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  .template-404__content p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  .template-404__content a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    padding: 20px 134px;
+
+  }
+
+  @media (max-width:1480px) {
+    .template-404__subtext {
+        width: 40%;     
+    }
+    .template-404__subtext img {
+        width: 100%;
+    }
+    
+    .template-404__content {
+      padding-right: 30px;
+      width: 40%;
+    }
+  }
+
+  @media (max-width:1030px) {
+    .template-404 {
+        flex-wrap: wrap;   
+        margin: 30px 0px;
+
+    }
+    .template-404__subtext {
+        width: 100%;
+        padding: 0px;
+    }
+    .template-404__subtext img {
+        width: 100%;
+    }
+    .template-404__content {
+       padding: 0px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .template-404__content h1, .template-404__content p, .template-404__content a {
+        text-align: center;
+    } 
+  }
+
+  @media (max-width: 768px) {
+    .template-404 {
+        flex-wrap: wrap;   
+        margin: 30px 0px;
+
+    }
+
+    .template-404__subtext {
+        width: 100%;
+        max-width: 600px;
+        padding: 0px;
+    }
+
+    .template-404__subtext img {
+        width: 100%;
+    }
+
+    .template-404__content {
+        width: 100%;
+        text-align: center;
+        padding: 0px;
+    }
+
+
+    .template-404__content h1 {
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 70px;
+        letter-spacing: 0.02em;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .template-404__content p {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    
+      .template-404__content a {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        text-align: center;
+        padding: 20px 60px;
+    
+      }
+  }
