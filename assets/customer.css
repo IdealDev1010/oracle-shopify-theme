@@ -22,7 +22,14 @@
 }
 
 .customer button {
-  margin: 4rem 0 1.5rem;
+  margin: 8rem 0 2rem;
+  max-width: 460px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-align: center;
 }
 
 .customer ul {
@@ -52,7 +59,7 @@
 }
 
 .customer .field {
-  margin: 2rem 0 0 0;
+  margin: 4rem 0 0 0;
 }
 
 .customer .field:first-of-type {
@@ -341,7 +348,7 @@
 }
 
 .login .field + a {
-  margin-top: 1rem;
+  margin-top: 4rem;
 }
 
 .login p {
@@ -385,6 +392,40 @@
   letter-spacing: 0.02em;
   text-align: center;
 }
+
+.field__input, .customer .field input {
+  border: none;
+ border-bottom: 1px solid rgba(153,153,153, 0.5);
+}
+
+.field__label, .customer .field label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #999;
+}
+
+ .customer .field input:focus ~ label,
+ .customer .field input:active ~ label {
+  opacity: 0;            
+  pointer-events: none; 
+ }
+
+ .field input:-webkit-autofill~label {
+  display: none;
+ }
+
+ .underlined-link, .customer a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform:initial;
+    margin-bottom: 50px;
+  }
 
 #recover {
   margin-bottom: 0;
