@@ -13,7 +13,7 @@
     }
   }
 {%- endstyle -%}
-
+{% render 'breadcrumbs' %}
 <div class="customer login section-{{ section.id }}-padding">
   <h1 id="recover" tabindex="-1">
     {{ 'customer.recover_password.title' | t }}
@@ -121,7 +121,7 @@
             value=""
             name="customer[password]"
             id="CustomerPassword"
-            autocomplete="current-password"
+            {% comment %} autocomplete="current-password" {% endcomment %}
             {% if form.errors contains 'form' %}
               aria-invalid="true"
             {% endif %}
@@ -138,7 +138,8 @@
       {%- endif -%}
 
       <button>
-        {{ 'customer.login_page.sign_in' | t }}
+        {% comment %} {{ 'customer.login_page.sign_in' | t }} {% endcomment %}
+        Login
       </button>
 
       <a href="{{ routes.account_register_url }}">

@@ -2,6 +2,7 @@
 <div class="breadcrumbs">
     <a href="/">Home</a>
     <span class="breadcrumbs_address"> > </span>
+    {% comment %} {{ template.name }} {% endcomment %}
     {% case template.name %}
         {% when 'list-collections' %}
            Jewelry<span class="breadcrumbs_address"> > </span><a href="{{ collections.url }}">collections</a>
@@ -24,7 +25,8 @@
             {{ blog.title | link_to: blog.url }}
             <span class="breadcrumbs_address"> > </span>
               <a href="{{ article.url }}" aria-current="page">{{ article.title }}</a>
-     
+        {% when 'login' %}
+            <a href="/account/login" aria-current="page">Login</a>
            
     {% endcase %}
 </div>
