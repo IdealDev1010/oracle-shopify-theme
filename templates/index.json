@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -14,10 +23,10 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "",
-            "button_link_1": "shopify:\/\/policies\/terms-of-service",
+            "button_link_1": "shopify://policies/terms-of-service",
             "button_style_secondary_1": false,
             "button_label_2": "Shop Now",
-            "button_link_2": "shopify:\/\/collections\/all",
+            "button_link_2": "shopify://collections/all",
             "button_style_secondary_2": true
           }
         }
@@ -27,8 +36,8 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/pleased-caucasian-girl-looking-down-sad-black-haired-woman-posing-with-plant.png",
-        "mobile_image": "shopify:\/\/shop_images\/Property_1_Default.png",
+        "image": "shopify://shop_images/pleased-caucasian-girl-looking-down-sad-black-haired-woman-posing-with-plant.png",
+        "mobile_image": "shopify://shop_images/Property_1_Default.png",
         "image_overlay_opacity": 0,
         "image_desktop_height": 72,
         "image_mobile_height": 63,
@@ -76,7 +85,7 @@
     "text_title_VqXx9a": {
       "type": "text-title",
       "settings": {
-        "title": "<p>Minimalism and simplicity combined with<br\/>interesting shapes. Choose a piece of jewelry<br\/>that you like.<\/p>"
+        "title": "<p>Minimalism and simplicity combined with<br/>interesting shapes. Choose a piece of jewelry<br/>that you like.</p>"
       }
     },
     "photo_category_zrTJPR": {
@@ -85,25 +94,25 @@
         "photo_category_part_M84z4c": {
           "type": "photo-category-part",
           "settings": {
-            "image": "shopify:\/\/shop_images\/model-demonstrating-bracelet-isolated-gray.png"
+            "image": "shopify://shop_images/model-demonstrating-bracelet-isolated-gray.png"
           }
         },
         "photo_category_part_mjeR4R": {
           "type": "photo-category-part",
           "settings": {
-            "image": "shopify:\/\/shop_images\/young-model-demonstrating-expensive-ring.png"
+            "image": "shopify://shop_images/young-model-demonstrating-expensive-ring.png"
           }
         },
         "photo_category_part_BYPLzb": {
           "type": "photo-category-part",
           "settings": {
-            "image": "shopify:\/\/shop_images\/wedding-glass-precious-gold-luxury-golden_1_1.png"
+            "image": "shopify://shop_images/wedding-glass-precious-gold-luxury-golden_1_1.png"
           }
         },
         "photo_category_part_hiQkw3": {
           "type": "photo-category-part",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pretty-young-woman-posing-white-chair-studio_1.png"
+            "image": "shopify://shop_images/pretty-young-woman-posing-white-chair-studio_1.png"
           }
         }
       },
@@ -114,7 +123,7 @@
         "photo_category_part_hiQkw3"
       ],
       "settings": {
-        "photo": "shopify:\/\/shop_images\/charming-white-woman-holding-plant-pretty-blackhaired-girl-enjoying-indoor-photoshoot_4e417add-94f8-4e56-aab4-039e329843f3.png"
+        "photo": "shopify://shop_images/charming-white-woman-holding-plant-pretty-blackhaired-girl-enjoying-indoor-photoshoot_4e417add-94f8-4e56-aab4-039e329843f3.png"
       }
     },
     "image_banner_xPRGCa": {
@@ -144,8 +153,8 @@
         "buttons_HWpYcd"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/pexels-cottonbro-5359325_1.png",
-        "mobile_image": "shopify:\/\/shop_images\/pexels-cottonbro-5359325_1_1.png",
+        "image": "shopify://shop_images/pexels-cottonbro-5359325_1.png",
+        "mobile_image": "shopify://shop_images/pexels-cottonbro-5359325_1_1.png",
         "image_overlay_opacity": 30,
         "image_desktop_height": 56,
         "image_mobile_height": 55,
@@ -179,7 +188,7 @@
         "text_mzGiVR": {
           "type": "text",
           "settings": {
-            "text": "<p>We don’t have any ideas what to give ourselves, or are you doubting your choice?A gift certificate is a modern way to bring in friends and relatives, to pick out those who are dear to your heart.<\/p>",
+            "text": "<p>We don’t have any ideas what to give ourselves, or are you doubting your choice?A gift certificate is a modern way to bring in friends and relatives, to pick out those who are dear to your heart.</p>",
             "text_style": "body"
           }
         },
@@ -198,7 +207,7 @@
         "button_b4xhiT"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/model-demonstrating-silver-earrings.png",
+        "image": "shopify://shop_images/model-demonstrating-silver-earrings.png",
         "Gift_card": false,
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -229,7 +238,7 @@
         "text_BCN7fr": {
           "type": "text",
           "settings": {
-            "text": "<p>Sign up for exclusive deals and early access to new products.<\/p>",
+            "text": "<p>Sign up for exclusive deals and early access to new products.</p>",
             "text_style": "body"
           }
         },
@@ -245,7 +254,7 @@
         "email_D6BVqr"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/image_5.png",
+        "image": "shopify://shop_images/image_5.png",
         "Gift_card": true,
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -262,6 +271,20 @@
         "padding_mob_top": 0,
         "padding_mob_bottom": 28
       }
+    },
+    "video_EW9i7x": {
+      "type": "video",
+      "settings": {
+        "heading": "Video",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=EY_1vp7JlSI",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -272,6 +295,7 @@
     "image_banner_xPRGCa",
     "feature_product_UR9xKJ",
     "image_with_text_mJz9AT",
-    "image_with_text_6YaxzD"
+    "image_with_text_6YaxzD",
+    "video_EW9i7x"
   ]
 }
