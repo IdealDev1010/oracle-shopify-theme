@@ -244,8 +244,7 @@
         },
         "email_D6BVqr": {
           "type": "email",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -278,7 +277,7 @@
         "heading": "Video",
         "heading_size": "h1",
         "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=NG5f-3CWwOw",
+        "video_url": "https://www.youtube.com/watch?v=hw9KcvZc_UE",
         "description": "",
         "full_width": false,
         "color_scheme": "",
