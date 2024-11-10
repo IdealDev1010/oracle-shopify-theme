@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -13,8 +22,7 @@
         },
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "inventory_p7ayhe": {
           "type": "inventory",
@@ -26,8 +34,7 @@
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -37,8 +44,7 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -49,8 +55,7 @@
         },
         "description": {
           "type": "description",
-          "settings": {
-          }
+          "settings": {}
         },
         "share": {
           "type": "share",
@@ -61,8 +66,8 @@
         "pickup_info_NTK8k3": {
           "type": "pickup_info",
           "settings": {
-            "icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"14\" height=\"10\" viewbox=\"0 0 14 10\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.2803 0.21967C13.5732 0.512563 13.5732 0.987437 13.2803 1.28033L5.28033 9.28033C4.98744 9.57322 4.51256 9.57322 4.21967 9.28033L0.21967 5.28033C-0.0732233 4.98744 -0.0732233 4.51256 0.21967 4.21967C0.512563 3.92678 0.987437 3.92678 1.28033 4.21967L4.75 7.68934L12.2197 0.21967C12.5126 -0.0732233 12.9874 -0.0732233 13.2803 0.21967Z\" fill=\"#17B656\"><\/path>\n<\/svg>",
-            "text": "<p>Pickup available at Oracle Store (LitwoodRock Street 155, Chicago)<\/p><p>Usually ready in 24 hours<\/p>"
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"10\" viewbox=\"0 0 14 10\" fill=\"none\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.2803 0.21967C13.5732 0.512563 13.5732 0.987437 13.2803 1.28033L5.28033 9.28033C4.98744 9.57322 4.51256 9.57322 4.21967 9.28033L0.21967 5.28033C-0.0732233 4.98744 -0.0732233 4.51256 0.21967 4.21967C0.512563 3.92678 0.987437 3.92678 1.28033 4.21967L4.75 7.68934L12.2197 0.21967C12.5126 -0.0732233 12.9874 -0.0732233 13.2803 0.21967Z\" fill=\"#17B656\"></path>\n</svg>",
+            "text": "<p>Pickup available at Oracle Store (LitwoodRock Street 155, Chicago)</p><p>Usually ready in 24 hours</p>"
           }
         }
       },
@@ -111,10 +116,25 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "video_HQbJyf": {
+      "type": "video",
+      "settings": {
+        "heading": "Video",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=eH6ebJzTRM4",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "video_HQbJyf"
   ]
 }
